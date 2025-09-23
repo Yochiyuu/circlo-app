@@ -15,54 +15,85 @@ body {
 }
 
 .header {
+    margin-left: auto;
     width: 100%;
-    padding: 1.5rem 8%;
-    background: #0d0d0d;
+    padding: 1rem 10%;
+    background: rgba(13, 13, 13, 0.85);
     display: flex;
     justify-content: space-between;
     align-items: center;
     position: sticky;
     top: 0;
     border-bottom: 1px solid #222;
-    z-index: 10;
+    z-index: 1000;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
 }
 
-
-.header h1 {
-    font-size: 2.5rem;
-
+.header h1.logo {
+    font-size: 2rem;
+    font-weight: 800;
+    color: #9333ea;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
 }
 
+.header h1.logo:hover {
+    transform: scale(1.05);
+}
+
+.nav-links {
+    margin-left: 100vh;
+}
 
 .header nav {
     display: flex;
-    gap: 2rem;
+    gap: 3rem;
 }
 
 .header nav a {
     font-size: 1.1rem;
+    font-weight: 500;
     color: white;
+    text-decoration: none;
+    position: relative;
     padding: 0.3rem 0;
+    transition: color 0.3s ease;
 }
-
 
 .header nav a::after {
     content: "";
     position: absolute;
-    bottom: -4px;
     left: 0;
+    bottom: -5px;
     width: 0;
     height: 2px;
-    background: white;
-    transition: 0.3s ease;
+    background: #9333ea;
+    transition: width 0.3s ease;
 }
 
 .header nav a:hover {
-    text-decoration: underline;
+    color: #9333ea;
 }
 
 .header nav a:hover::after {
     width: 100%;
+}
+
+.header-controls {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.menu-btn {
+    display: none;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 1.5rem;
+    cursor: pointer;
 }
 
 .container {
@@ -396,7 +427,7 @@ footer {
     position: relative;
 }
 
-.list li a{
+.list li a {
     color: white;
 }
 
@@ -435,9 +466,149 @@ a {
     padding: 7px;
 }
 
-#home, #about, #community {
+#home,
+#about,
+#community {
     scroll-margin-top: 100px;
 }
+
+.theme-btn {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    color: white;
+    font-size: 1.3rem;
+    cursor: pointer;
+    padding: 0.4rem 0.6rem;
+    border-radius: 50%;
+    transition: background 0.3s ease, color 0.3s ease, transform 0.2s ease;
+}
+
+.theme-btn:hover {
+    background: rgba(147, 51, 234, 0.2);
+    transform: scale(1.1);
+}
+
+body.light-mode .theme-btn {
+    color: #333;
+}
+
+body.light-mode .theme-btn:hover {
+    color: #9333ea;
+}
+
+body.light-mode {
+    background: #f5f5f5;
+    color: #111;
+}
+
+body.light-mode .header {
+    background: rgba(255, 255, 255, 0.85);
+    border-bottom: 1px solid #ddd;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+body.light-mode .header nav a {
+    color: #111;
+}
+
+body.light-mode .header nav a:hover {
+    color: #9333ea;
+}
+
+body.light-mode .menu-btn {
+    color: #111;
+}
+
+body.light-mode .left-panel {
+    background: radial-gradient(circle at top, #9333ea, #ddd);
+}
+
+body.light-mode .right-panel {
+    background: white;
+    color: #111;
+}
+
+body.light-mode .step {
+    border: 1px solid white;
+    background: rgba(0, 0, 0, 0.05);
+    color: #333;
+}
+
+body.light-mode .step.active {
+    background: #9333ea;
+    color: white;
+}
+
+body.light-mode .desc {
+    color: #555;
+}
+
+body.light-mode .primary {
+    background: #9333ea;
+    color: white;
+}
+
+body.light-mode .primary:hover {
+    background: #7b22ca;
+}
+
+body.light-mode .secondary {
+    border: 1px solid #9333ea;
+    color: #9333ea;
+}
+
+body.light-mode .secondary:hover {
+    background: rgba(147, 51, 234, 0.1);
+}
+
+body.light-mode .about-card {
+    color: black;
+    border: 1px solid #ddd;
+    background: white;
+}
+
+body.light-mode .about-card h2 {
+    color: black;
+}
+
+body.light-mode .about-card p {
+    color: #555;
+}
+
+body.light-mode .about-card a {
+    color: #555;
+}
+
+body.light-mode .community-grid .card {
+    background: white;
+    border: 1px solid #ddd;
+}
+
+body.light-mode .card p {
+    color: black;
+}
+
+body.light-mode .btn-join {
+    background: #9333ea;
+    color: white;
+}
+
+body.light-mode footer {
+    border-top: 1px solid #ddd;
+    background: #fff;
+}
+
+body.light-mode .footer-content h3,
+body.light-mode .footer-content p,
+body.light-mode .list li a,
+body.light-mode .bottom-bar p {
+    color: #111;
+}
+
+body.light-mode .bottom-bar {
+    background: #f0f0f0;
+}
+
 
 @keyframes fadeIn {
     from {
@@ -451,10 +622,137 @@ a {
     }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
+    .header {
+        padding: 1rem 7%;
+    }
+
+    .nav-links {
+        margin-left: 0;
+    }
+
+    .header nav {
+        gap: 2rem;
+    }
+
     .container {
         flex-direction: column;
         width: 95%;
+        height: auto;
+        margin-top: 100px;
+    }
+
+    .left-panel,
+    .right-panel {
+        padding: 2.5rem 2rem;
+        text-align: center;
+    }
+
+    .branding h1 {
+        font-size: 2rem;
+    }
+
+    .branding p {
+        font-size: 1.1rem;
+    }
+
+    .steps {
+        gap: 0.6rem;
+    }
+
+    .step {
+        font-size: 0.85rem;
+        padding: 0.6rem 0.9rem;
+    }
+
+    .right-panel h2 {
+        font-size: 1.8rem;
+    }
+
+    .desc {
+        font-size: 0.9rem;
+        text-align: justify;
+    }
+
+    .button-group {
+        width: 70%;
+    }
+
+    .about-text {
+        margin-left: 8vh;
+        margin-right: 8vh;
+        font-size: 18px;
+        padding: 25px;
+    }
+
+    .about-page {
+        gap: 50px;
+    }
+
+    .community-grid {
+        gap: 30px;
+    }
+
+    .card img {
+        height: 400px;
+    }
+
+    .card h2 {
+        font-size: 1.4rem;
+    }
+
+    .card p {
+        font-size: 0.95rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .header {
+        padding: 1rem 5%;
+    }
+
+    .menu-btn {
+        display: block;
+    }
+
+    .header.nav {
+        margin: 0;
+        display: flex;
+        gap: 3rem;
+    }
+
+    .nav-links {
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 1.5rem;
+        position: absolute;
+        margin-top: 56vh;
+        left: 0;
+        width: 100%;
+        background: rgba(13, 13, 13, 0.98);
+        backdrop-filter: blur(10px);
+        padding: 2rem 0;
+        transform: translateY(-150%);
+        transition: transform 0.4s ease-in-out;
+        border-bottom: 1px solid #222;
+    }
+
+    .nav-links.active {
+        transform: translateY(0);
+    }
+
+    body.light-mode .nav-links {
+        background: rgba(255, 255, 255, 0.98);
+        border-bottom: 1px solid #ddd;
+    }
+
+    .container {
+        flex-direction: column;
+        width: 95%;
+        height: auto;
+        margin-top: 80px;
     }
 
     .left-panel {
@@ -469,6 +767,10 @@ a {
     .right-panel {
         padding: 2rem 1.5rem;
         text-align: center;
+    }
+
+    .about-text {
+        margin: 5px;
     }
 
     .desc {
