@@ -1,0 +1,335 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+:root {
+    --primary-color: #9333ea;
+    --background-color: #F0F2F5;
+    --surface-color: #FFFFFF;
+    --text-color: #0F1419;
+    --text-secondary-color: #5B7083;
+    --border-color: #EBEEF0;
+    --shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+a {
+    text-decoration: none;
+    color: var(--primary-color);
+}
+
+ul {
+    list-style-type: none;
+}
+
+.main-header {
+    background-color: var(--surface-color);
+    border-bottom: 1px solid var(--border-color);
+    padding: 0 20px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    width: 100%;
+}
+
+.header-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 60px;
+}
+
+.logo a {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--primary-color);
+}
+
+.main-nav ul {
+    display: flex;
+    gap: 20px;
+}
+
+.main-nav ul li a {
+    font-size: 1.3rem;
+    color: var(--text-secondary-color);
+    transition: color 0.2s;
+}
+
+.main-nav ul li a:hover {
+    color: var(--primary-color);
+}
+
+.user-profile img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.main-content {
+    padding: 20px;
+}
+
+.content-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    gap: 20px;
+}
+
+.sidebar-left {
+    flex: 1;
+    max-width: 280px;
+}
+
+.main-feed {
+    flex: 2;
+    max-width: 600px;
+}
+
+.sidebar-right {
+    flex: 1;
+    max-width: 280px;
+}
+
+.card {
+    background-color: var(--surface-color);
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: var(--shadow);
+}
+
+.profile-card {
+    text-align: center;
+}
+
+.profile-card .profile-pic {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+
+.profile-card h3 {
+    margin: 0;
+}
+
+.profile-card p {
+    color: var(--text-secondary-color);
+    margin-bottom: 15px;
+}
+
+.profile-stats {
+    display: flex;
+    justify-content: space-around;
+    border-top: 1px solid var(--border-color);
+    padding-top: 15px;
+}
+
+.profile-stats span {
+    font-weight: 600;
+    display: block;
+}
+
+.navigation-card ul li a {
+    display: block;
+    padding: 10px;
+    border-radius: 5px;
+    color: var(--text-color);
+    font-weight: 500;
+}
+
+.navigation-card ul li a:hover {
+    background-color: var(--background-color);
+}
+
+.navigation-card i {
+    margin-right: 15px;
+    width: 20px;
+    text-align: center;
+}
+
+.create-post {
+    display: flex;
+    align-items: flex-start;
+    gap: 15px;
+}
+
+.create-post img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+
+.create-post textarea {
+    flex-grow: 1;
+    border: none;
+    background-color: var(--background-color);
+    padding: 10px;
+    border-radius: 5px;
+    min-height: 60px;
+    resize: vertical;
+}
+
+.create-post button {
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 20px;
+    font-weight: 600;
+    cursor: pointer;
+    align-self: flex-end;
+}
+
+.post .post-header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+.post .post-header img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+
+.post .post-header strong {
+    font-size: 1rem;
+}
+
+.post .post-meta {
+    font-size: 0.85rem;
+    color: var(--text-secondary-color);
+    line-height: 1.2;
+}
+
+.post .post-image {
+    width: 100%;
+    border-radius: 8px;
+    margin-top: 5px;
+}
+
+.post .post-actions {
+    display: flex;
+    justify-content: space-around;
+    border-top: 1px solid var(--border-color);
+    padding-top: 10px;
+    margin-top: 15px;
+}
+
+.post .post-actions button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: var(--text-secondary-color);
+    font-weight: 500;
+    padding: 5px 10px;
+    border-radius: 5px;
+    transition: background-color 0.2s;
+}
+
+.post .post-actions button:hover {
+    background-color: var(--background-color);
+}
+
+.post .post-actions i {
+    margin-right: 8px;
+}
+
+.suggestions-card h4, .trending-card h4 {
+    margin-bottom: 15px;
+    border-bottom: 1px solid var(--border-color);
+    padding-bottom: 10px;
+}
+
+.suggestion-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+.suggestion-item img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+
+.suggestion-item div {
+    flex-grow: 1;
+}
+
+.suggestion-item strong {
+    font-size: 0.9rem;
+}
+
+.suggestion-item p {
+    font-size: 0.8rem;
+    color: var(--text-secondary-color);
+    line-height: 1.2;
+}
+
+.suggestion-item button {
+    background: none;
+    border: 1px solid var(--primary-color);
+    color: var(--primary-color);
+    font-weight: 600;
+    padding: 5px 12px;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+.trending-card ul li a {
+    display: block;
+    padding: 8px;
+    border-radius: 5px;
+    color: var(--text-color);
+}
+
+.trending-card ul li a:hover {
+    background-color: var(--background-color);
+}
+
+@media (max-width: 1024px) {
+    .sidebar-right {
+        display: none;
+    }
+
+    .main-feed {
+        flex-grow: 1;
+    }
+}
+
+@media (max-width: 768px) {
+    .sidebar-left {
+        display: none;
+    }
+
+    .main-header {
+        padding: 0 10px;
+    }
+
+    .main-content {
+        padding: 10px;
+    }
+
+    .main-nav ul {
+        gap: 10px;
+    }
+}
