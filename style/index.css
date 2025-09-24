@@ -289,7 +289,7 @@ body {
 
 .about-card h2 {
     text-align: center;
-    font-size: 1.8rem;
+    font-size: 1.5rem;
     color: white;
     margin-bottom: 15px;
 }
@@ -475,7 +475,7 @@ a {
 .theme-btn {
     background: rgba(255, 255, 255, 0.05);
     border: 1px solid rgba(255, 255, 255, 0.2);
-    color: white;
+    color: red;
     font-size: 1.3rem;
     cursor: pointer;
     padding: 0.4rem 0.6rem;
@@ -489,7 +489,7 @@ a {
 }
 
 body.light-mode .theme-btn {
-    color: #333;
+    color: black;
 }
 
 body.light-mode .theme-btn:hover {
@@ -519,6 +519,10 @@ body.light-mode .menu-btn {
     color: #111;
 }
 
+body.light-mode .container {
+    box-shadow: 0 0 15px #9333ea;
+}
+
 body.light-mode .left-panel {
     background: radial-gradient(circle at top, #9333ea, #ddd);
 }
@@ -528,10 +532,15 @@ body.light-mode .right-panel {
     color: #111;
 }
 
+body.light-mode .branding p,
+body.light-mode .branding span {
+    color: white;
+}
+
 body.light-mode .step {
     border: 1px solid white;
-    background: rgba(0, 0, 0, 0.05);
-    color: #333;
+    background: white;
+    color: black;
 }
 
 body.light-mode .step.active {
@@ -565,6 +574,7 @@ body.light-mode .about-card {
     color: black;
     border: 1px solid #ddd;
     background: white;
+    box-shadow: 0 0 15px #9333ea;
 }
 
 body.light-mode .about-card h2 {
@@ -572,16 +582,19 @@ body.light-mode .about-card h2 {
 }
 
 body.light-mode .about-card p {
-    color: #555;
+    font-weight: 300;
+    color: black;
 }
 
 body.light-mode .about-card a {
-    color: #555;
+    color: #9333ea;
 }
 
 body.light-mode .community-grid .card {
     background: white;
     border: 1px solid #ddd;
+    box-shadow: 0 0 15px #9333ea;
+
 }
 
 body.light-mode .card p {
