@@ -105,6 +105,27 @@ ul {
     max-width: 280px;
 }
 
+.sidebar-left,
+.sidebar-right {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 80px;
+    align-self: flex-start;
+    height: calc(100vh - 80px);
+    overflow-y: auto;
+}
+
+.sidebar-left::-webkit-scrollbar,
+.sidebar-right::-webkit-scrollbar {
+    width: 6px;
+}
+
+.sidebar-left::-webkit-scrollbar-thumb,
+.sidebar-right::-webkit-scrollbar-thumb {
+    background: #ccc;
+    border-radius: 10px;
+}
+
 .card {
     background-color: var(--surface-color);
     border-radius: 8px;
