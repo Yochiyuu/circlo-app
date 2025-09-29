@@ -1,5 +1,5 @@
 html {
-    overflow-y: scroll; 
+    overflow-y: scroll;
 }
 
 * {
@@ -9,16 +9,72 @@ html {
     box-sizing: border-box;
 }
 
-/* Pengaturan Body untuk Layout Sidebar */
+/* Layout body dengan 2 sidebar */
 body {
     display: flex;
-    background: #f0f2f5; /* Warna latar belakang abu-abu muda seperti di gambar */
-    color: #1c1e21; /* Ubah warna teks default menjadi gelap */
-    font-family:'Poppins'
+    background: #f0f2f5;
+    color: #1c1e21;
+    font-family: 'Poppins', sans-serif;
 }
 
-/* === CSS UNTUK SIDEBAR KIRI (Mulai dari sini) === */
+/* === NAVBAR / HEADER === */
+.main-header {
+  background: #fff;
+  border-bottom: 1px solid #e5e7eb;
+  padding: 10px 20px;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
 
+.header-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.logo a {
+  font-weight: 700;
+  font-size: 1.4rem;
+  color: #9333ea; /* ungu biar konsisten */
+  text-decoration: none;
+}
+
+.main-nav ul {
+  list-style: none;
+  display: flex;
+  gap: 28px;
+  margin: 0;
+  padding: 0;
+}
+
+.main-nav a {
+  color: #4b5563;
+  font-size: 1.2rem;
+  transition: color 0.2s ease-in-out;
+}
+
+.main-nav a:hover {
+  color: #9333ea;
+}
+
+.user-profile img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 2px solid #9333ea;
+  transition: transform 0.2s ease-in-out;
+}
+
+.user-profile img:hover {
+  transform: scale(1.05);
+}
+
+
+/* === SIDEBAR KIRI === */
 .sidebar-left {
     width: 300px;
     flex-shrink: 0;
@@ -28,17 +84,17 @@ body {
     align-self: flex-start;
 }
 
-/* Style umum untuk kedua kartu di sidebar */
+/* Kartu umum */
 .card {
-    background-color: #ffffff; /* Latar belakang kartu putih */
-    border-radius: 16px;       /* Sudut yang lebih tumpul */
+    background-color: #ffffff;
+    border-radius: 16px;
     padding: 24px;
     margin-bottom: 20px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Tambahkan sedikit bayangan */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     text-align: center;
 }
 
-/* -- Kartu Profil -- */
+/* Profil */
 .profile-card {
     display: flex;
     flex-direction: column;
@@ -60,8 +116,8 @@ body {
     margin: 0;
 }
 
-.profile-card > p { /* Target username @User */
-    color: #65676b; /* Warna abu-abu untuk username */
+.profile-card > p {
+    color: #65676b;
     font-size: 0.9rem;
     margin-top: 4px;
     margin-bottom: 20px;
@@ -72,7 +128,7 @@ body {
     justify-content: space-around;
     width: 100%;
     padding-top: 15px;
-    border-top: 1px solid #e0e0e0; /* Garis pemisah */
+    border-top: 1px solid #e0e0e0;
 }
 
 .profile-card .profile-stats div span {
@@ -87,8 +143,7 @@ body {
     margin-top: 2px;
 }
 
-
-/* -- Kartu Navigasi -- */
+/* Navigasi */
 .navigation-card {
     padding: 16px;
 }
@@ -103,6 +158,7 @@ body {
 .navigation-card li {
     margin-bottom: 8px;
 }
+
 .navigation-card li:last-child {
     margin-bottom: 0;
 }
@@ -119,497 +175,17 @@ body {
 }
 
 .navigation-card li a:hover {
-    background-color: #f0f2f5; /* Warna hover */
+    background-color: #f0f2f5;
 }
 
 .navigation-card li a i {
     font-size: 1.2rem;
-    width: 24px; /* Lebar ikon agar teks sejajar */
+    width: 24px;
     margin-right: 16px;
     color: #555;
 }
 
-/* === BATAS AKHIR CSS UNTUK SIDEBAR KIRI === */
-
-
-.profile-container {
-    flex-grow: 1; /* Membuat konten utama mengisi sisa ruang */
-    max-width: 980px;
-    margin: 20px;
-    padding: 0 20px;
-    animation: fadeIn 0.6s ease-in-out;
-}
-
-.profile-header {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 60px;
-    padding-bottom: 40px;
-    margin-bottom: 20px;
-}
-
-.profile-avatar img {
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
-    object-fit: cover;
-    border: 3px solid #333;
-    transition: transform 0.4s ease;
-}
-.profile-avatar img:hover {
-    transform: scale(1.05) rotate(5deg);
-}
-
-.profile-info {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-    max-width: 400px;
-}
-
-.profile-title {
-    display: flex;
-    align-items: center;
-    gap: 20px;
-    flex-wrap: wrap;
-}
-
-
-.username {
-    font-size: 1.2rem;
-    font-weight: 400;
-}
-
-.profile-actions {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-}
-
-.btn-profile {
-    background: #363636;
-    color: white;
-    padding: 10px 20px;
-    border-radius: 8px;
-    text-decoration: none;
-    font-size: 0.9rem;
-    font-weight: 600;
-    border: 1px solid #555;
-    transition: all 0.3s ease;
-}
-.btn-profile:hover {
-    background-color: #9333ea;
-    border-color: #a855f7;
-    box-shadow: 0 0 15px rgba(147, 51, 234, 0.5);
-    transform: translateY(-2px);
-}
-
-.settings-btn {
-    font-size: 1.5rem;
-    color: #888;
-    transition: color 0.3s ease, transform 0.3s ease;
-}
-.settings-btn:hover {
-    color: #9333ea;
-    transform: rotate(45deg);
-}
-
-.profile-stats ul {
-    display: flex;
-    list-style: none;
-    gap: 40px;
-    padding: 0;
-}
-
-.profile-stats li {
-    font-size: 1rem;
-    cursor: pointer;
-    transition: color 0.3s ease;
-}
-.profile-stats li:hover {
-    color: #a855f7;
-}
-
-.stat-count {
-    font-weight: 600;
-    margin-right: 5px;
-}
-
-.profile-bio .name {
-    font-weight: 600;
-    font-size: 1.1rem;
-}
-.profile-bio .description {
-    font-size: 0.95rem;
-    color: #aaa;
-    line-height: 1.5;
-    margin-top: 5px;
-}
-
-.profile-highlights {
-    display: flex;
-    gap: 40px; 
-    padding: 10px 0 30px 0; 
-    justify-content: center;
-    margin-left: -180px; 
-}
-
-.highlight-item {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 10px;
-    cursor: pointer;
-}
-
-.highlight-story-circle {
-    width: 80px;
-    height: 80px;
-    border-radius: 50%;
-    background: gray; 
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 3px;
-    transition: background 0.4s ease, transform 0.3s ease;
-}
-
-.highlight-story-circle:hover {
-    background: linear-gradient(45deg, #a855f7, #9333ea);
-    transform: scale(1.08);
-}
-
-.highlight-story-circle img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    border-radius: 50%;
-    border: 3px solid #111;
-}
-
-.highlight-title {
-    font-size: 0.85rem;
-    font-weight: 500;
-}
-
-.add-highlight {
-    background: none;
-    border: 2px solid #333;
-    font-size: 2rem;
-    color: #555;
-    transition: all 0.3s ease;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-.highlight-item:hover .add-highlight {
-    border-color: #9333ea;
-    color: #9333ea;
-}
-
-.profile-tabs {
-    display: flex;
-    justify-content: center;
-    gap: 40px;
-    border-bottom: 1px solid #333;
-}
-
-.tab-item {
-    position: relative;
-    cursor: pointer;
-    color: #8e8e8e;
-    text-decoration: none;
-    font-size: 0.8rem;
-    font-weight: 600;
-    letter-spacing: 1px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 8px; 
-    padding: 15px 0;
-    width: 130px;
-    transition: color 0.3s ease;
-}
-
-.tab-item::after {
-    content: '';
-    position: absolute;
-    bottom: -1px;
-    left: 50%;
-    width: 60px;
-    height: 2px;
-    background-color: #9333ea; 
-    transform: translateX(-50%) scaleX(0);
-    transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275); 
-}
-
-.tab-item:hover {
-    color: #a855f7;
-}
-
-.tab-item.active {
-    color: #1c1e21; /* <<< INI PERUBAHANNYA */
-}
-
-.tab-item.active::after {
-    transform: translateX(-50%) scaleX(1);
-}
-
-.photo-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
-    padding-top: 40px;
-}
-
-.photo-item {
-    position: relative;
-    cursor: pointer;
-    overflow: hidden;
-    border-radius: 8px;
-}
-
-.photo-item img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    border-radius: 8px;
-    transition: transform 0.4s ease;
-}
-
-.photo-item-overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(to top, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0));
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: white;
-    opacity: 0;
-    transition: opacity 0.4s ease;
-}
-
-.photo-item-stats {
-    display: flex;
-    gap: 25px;
-    font-size: 1.2rem;
-    font-weight: bold;
-    text-shadow: 1px 1px 5px rgba(0,0,0,0.5); 
-}
-
-.photo-item-stats span {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-}
-
-.photo-item:hover .photo-item-overlay {
-    opacity: 1;
-}
-
-.photo-item:hover img {
-    transform: scale(1.1);
-}
-
-.no-posts {
-    grid-column: 1 / -1;
-    text-align: center;
-    padding: 80px 20px;
-    color: #555;;
-    border-radius: 10px;
-    margin-top: 40px;
-}
-
-.no-posts-icon {
-    font-size: 3rem;
-    margin-bottom: 20px;
-    color: #444;
-}
-
-.no-posts h2 {
-    font-size: 1.5rem;
-    font-weight: 500;
-    color: #777;
-}
-
-.no-posts p {
-    font-size: 1rem;
-    color: #555;
-}
-
-.hidden {
-    display: none !important;
-}
-
-.list {
-    padding: 0;
-}
-
-.list li {
-    width: auto;
-    text-align: center;
-    list-style-type: none;
-    padding: 7px;
-    position: relative;
-}
-
-.list li a {
-    color: white;
-}
-
-a {
-    text-decoration: none;
-}
-
-.bottom-bar {
-    background: black;
-    text-align: center;
-    padding: 10px 0;
-    margin-top: 50px;
-}
-
-.bottom-bar p {
-    color: white;
-    margin: 0;
-    font-size: 15px;
-    padding: 7px;
-}
-
-body.light-mode {
-    background: #f5f5f5;
-    color: #111;
-}
-body.light-mode .header {
-    background: rgba(255, 255, 255, 0.85);
-    border-bottom: 1px solid #ddd;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-}
-body.light-mode .header nav a {
-    color: #111;
-}
-body.light-mode .header nav a:hover {
-    color: #9333ea;
-}
-body.light-mode .theme-btn, 
-body.light-mode .menu-btn {
-    color: #111;
-}
-body.light-mode .theme-btn:hover,
-body.light-mode .menu-btn:hover {
-    background-color: rgba(0, 0, 0, 0.1);
-}
-body.light-mode .profile-header {
-    border-color: #ddd;
-}
-body.light-mode .profile-avatar img {
-    border-color: #ddd;
-}
-body.light-mode .btn-profile {
-    background: #efefef;
-    color: #111;
-    border-color: #ddd;
-}
-body.light-mode .btn-profile:hover {
-    background-color: #9333ea;
-    border-color: #a855f7;
-    color: white;
-}
-body.light-mode .settings-btn {
-    color: #aaa;
-}
-body.light-mode .settings-btn:hover {
-    color: #9333ea;
-}
-body.light-mode .profile-bio .description {
-    color: #555;
-}
-body.light-mode .profile-highlights {
-    border-bottom-color: #ddd;
-}
-body.light-mode .highlight-story-circle img {
-    border-color: #f5f5f5;
-}
-body.light-mode .add-highlight {
-    border-color: #ccc;
-    color: #ccc;
-}
-body.light-mode .add-highlight:hover {
-    border-color: #9333ea;
-    color: #9333ea;
-}
-body.light-mode .profile-tabs {
-    border-bottom-color: #ddd;
-}
-body.light-mode .tab-item {
-    color: #555;
-}
-body.light-mode .tab-item:hover {
-    color: #9333ea;
-}
-body.light-mode .tab-item.active {
-    color: #111;
-}
-body.light-mode .tab-item::after {
-    background-color: #9333ea;
-}
-body.light-mode .no-posts {
-    color: #ccc;
-}
-body.light-mode .no-posts-icon {
-    color: #ddd;
-}
-body.light-mode .no-posts h2,
-body.light-mode .no-posts p {
-    color: #bbb;
-}
-body.light-mode footer {
-    border-top: 1px solid #ddd;
-    background: #fff;
-}
-body.light-mode .footer-content h3,
-body.light-mode .footer-content p,
-body.light-mode .list li a,
-body.light-mode .bottom-bar p {
-    color: #111;
-}
-body.light-mode .bottom-bar {
-    background: #f0f0f0;
-}
-
-@media (max-width: 1024px) {
-    .header {
-        padding: 1rem 7%;
-    }
-}
-
-@media (max-width: 768px) {
-    .header .nav-links {
-        display: none;
-    }
-    .header-controls {
-        margin-left: auto;
-    }
-    .menu-btn {
-        display: block;
-    }
-    .profile-header {
-        flex-direction: column;
-    }
-    .profile-info {
-        align-items: center;
-    }
-    .profile-highlights {
-        justify-content: center;
-        margin-left: 0;
-    }
-}
-
-/* === CSS UNTUK SIDEBAR KANAN === */
-
+/* === SIDEBAR KANAN === */
 .sidebar-right {
     width: 320px;
     flex-shrink: 0;
@@ -621,8 +197,9 @@ body.light-mode .bottom-bar {
     overflow-y: auto;
 }
 
-/* Mengatur judul di kedua kartu */
-.suggestions-card h4, .trending-card h4 {
+/* Judul */
+.suggestions-card h4,
+.trending-card h4 {
     text-align: left;
     font-size: 1.1rem;
     font-weight: 700;
@@ -630,7 +207,7 @@ body.light-mode .bottom-bar {
     color: #1c1e21;
 }
 
-/* --- Kartu Saran untuk Anda --- */
+/* Saran */
 .suggestion-item {
     display: flex;
     align-items: center;
@@ -664,27 +241,26 @@ body.light-mode .bottom-bar {
 }
 
 .suggestion-item button {
-    margin-left: auto; /* Trik untuk mendorong tombol ke kanan */
+    margin-left: auto;
     background: transparent;
     border: 1px solid #a855f7;
     color: #a855f7;
     padding: 6px 16px;
-    border-radius: 99px; /* Membuat bentuk tombol oval */
+    border-radius: 99px;
     font-weight: 600;
     cursor: pointer;
     transition: all 0.2s ease-in-out;
 }
 
 .suggestion-item button:hover {
-    background: #f0e6ff; /* Warna ungu sangat muda saat hover */
+    background: #f0e6ff;
     color: #9333ea;
 }
 
-
-/* --- Kartu Trending --- */
+/* Trending */
 .trending-card h4 {
     padding-bottom: 15px;
-    border-bottom: 1px solid #eee; /* Garis pemisah */
+    border-bottom: 1px solid #eee;
 }
 
 .trending-card ul {
@@ -697,6 +273,7 @@ body.light-mode .bottom-bar {
 .trending-card li {
     margin-bottom: 15px;
 }
+
 .trending-card li:last-child {
     margin-bottom: 0;
 }
@@ -710,4 +287,189 @@ body.light-mode .bottom-bar {
 
 .trending-card a:hover {
     color: #a855f7;
+}
+
+/* Main content */
+.main-content {
+  flex: 1;
+  padding: 20px;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* Profile Header */
+.profile-header {
+  background: #fff;
+  border-radius: 16px;
+  overflow: hidden;
+  margin-bottom: 20px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.cover-photo {
+  position: relative;
+  width: 100%;
+  height: 200px;
+}
+
+.cover-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.edit-profile-btn {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  background: #2563eb;
+  color: #fff;
+  border: none;
+  padding: 8px 14px;
+  border-radius: 6px;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.profile-info {
+  display: flex;
+  align-items: center;
+  padding: 20px;
+}
+
+.profile-avatar {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-right: 20px;
+  margin-top: -50px;
+  border: 4px solid #fff;
+}
+
+.info-text h2 {
+  margin: 0;
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.info-text p {
+  color: #666;
+  margin-bottom: 12px;
+}
+
+.stats {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+  padding: 0;
+  margin: 0;
+}
+
+.stats li {
+  text-align: center;
+}
+
+.stats li strong {
+  display: block;
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+/* Create post */
+.create-post {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.create-post .mini-avatar {
+  border-radius: 50%;
+}
+
+.create-post input {
+  flex: 1;
+  padding: 10px 15px;
+  border-radius: 20px;
+  border: 1px solid #ddd;
+}
+
+.create-post .actions {
+  display: flex;
+  gap: 10px;
+  color: #666;
+}
+
+/* Post */
+.post {
+  margin-top: 20px;
+}
+
+.post-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.post-header h4 {
+  margin: 0;
+  font-weight: 600;
+}
+
+.post-header p {
+  margin: 0;
+  font-size: 0.85rem;
+  color: #777;
+}
+
+.more {
+  margin-left: auto;
+  cursor: pointer;
+  color: #666;
+}
+
+.post-text {
+  margin-bottom: 10px;
+}
+
+.post-images {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 12px;
+}
+
+.post-images img {
+  width: calc(50% - 5px);
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+.post-actions {
+  display: flex;
+  justify-content: space-around;
+  padding: 10px 0;
+  border-top: 1px solid #eee;
+  border-bottom: 1px solid #eee;
+  margin-bottom: 10px;
+  color: #666;
+}
+
+.post-actions span {
+  cursor: pointer;
+  font-size: 0.95rem;
+}
+
+.comment-box {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.comment-box input {
+  flex: 1;
+  border: none;
+  background: #f0f2f5;
+  border-radius: 20px;
+  padding: 8px 14px;
 }
