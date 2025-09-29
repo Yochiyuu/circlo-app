@@ -4,61 +4,49 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Settings - Circlo</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-    <link rel="stylesheet" href="style/settings.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="/style/settings.css">
 </head>
 <body>
     <header class="main-header">
         <div class="header-container">
-            <div class="logo"><a href="./index.html">Circlo</a></div>
+            <div class="logo"><a href="index.html">Circlo</a></div>
             <nav class="main-nav">
-                <ul class="nav-links">
-                    <li><a href="./home.html">Home</a></li>
-                    <li><a href="./index.html#about">About</a></li>
-                    <li><a href="./index.html#community">Community</a></li>
-                    <li><a href="./profile.html">Profile</a></li>
-                    <li><a href="./settings.html">Settings</a></li>
+                <ul>
+                    <li><a href="home.html"><i class="fas fa-home"></i></a></li>
+                    <li><a href="#"><i class="fas fa-paper-plane"></i></a></li>
+                    <li><a href="#"><i class="fas fa-bell"></i></a></li>
                 </ul>
             </nav>
-            <div class="header-controls">
-                <button class="menu-btn" id="menu-btn">
-                    <i class="fas fa-bars"></i>
-                </button>
-                <button class="theme-toggle" id="theme-toggle">
-                    <i class="fas fa-moon"></i>
-                </button>
+            <div class="user-profile">
+                <a href="profile.html"><img src="https://i.pravatar.cc/40?u=user1" alt="Foto Profil"></a>
             </div>
         </div>
     </header>
 
-    <main class="main-content">
-        <div class="content-container">
-            <div class="sidebar-left">
-                <div class="card profile-card">
-                    <img src="https://via.placeholder.com/80" alt="Profile Picture" class="profile-pic">
-                    <h3>User</h3>
-                    <p>@User</p>
-                    <div class="profile-stats">
-                        <div>
-                            <span>1.401</span>
-                            <p>Following</p>
-                        </div>
-                        <div>
-                            <span>5,201</span>
-                            <p>Followers</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="card navigation-card">
-                    <ul>
-                        <li><a href="#"><i class="fas fa-search"></i>Search</a></li>
-                        <li><a href="#"><i class="fas fa-history"></i>Stories</a></li>
-                        <li><a href="./settings.html"><i class="fas fa-cog"></i>Settings</a></li>
-                    </ul>
+    <div class="layout">
+        <aside class="sidebar-left">
+            <div class="profile-card card">
+                <img src="https://i.pravatar.cc/80?u=user1" alt="Foto Profil" class="profile-pic">
+                <h3>User</h3>
+                <p>@User</p>
+                <div class="profile-stats">
+                    <div><span>1.401</span><p>Following</p></div>
+                    <div><span>5,201</span><p>Followers</p></div>
                 </div>
             </div>
+            <div class="navigation-card card">
+                <ul>
+                    <li><a href="#"><i class="fas fa-user-friends"></i> Search</a></li>
+                    <li><a href="#"><i class="fas fa-users"></i> Stories</a></li>
+                    <li><a href="./settings.html"><i class="fas fa-cog"></i> Pengaturan</a></li>
+                </ul>
+            </div>
+        </aside>
 
-            <div class="main-feed settings-page">
+        <main class="main-content">
+            <div class="settings-page">
                 <h1>Settings</h1>
                 <div class="settings-section">
                     <h2>Profile Settings</h2>
@@ -79,11 +67,17 @@
                     <h2>Privacy Settings</h2>
                     <div class="settings-item toggle-switch">
                         <label for="private-profile">Private Profile</label>
-                        <input type="checkbox" id="private-profile">
+                        <div class="toggle-container">
+                            <input type="checkbox" id="private-profile">
+                            <span class="toggle-slider"></span>
+                        </div>
                     </div>
                     <div class="settings-item toggle-switch">
                         <label for="hide-activity">Hide Activity Status</label>
-                        <input type="checkbox" id="hide-activity">
+                        <div class="toggle-container">
+                            <input type="checkbox" id="hide-activity">
+                            <span class="toggle-slider"></span>
+                        </div>
                     </div>
                 </div>
 
@@ -91,11 +85,17 @@
                     <h2>Notification Settings</h2>
                     <div class="settings-item toggle-switch">
                         <label for="email-notifications">Email Notifications</label>
-                        <input type="checkbox" id="email-notifications" checked>
+                        <div class="toggle-container">
+                            <input type="checkbox" id="email-notifications" checked>
+                            <span class="toggle-slider"></span>
+                        </div>
                     </div>
                     <div class="settings-item toggle-switch">
                         <label for="push-notifications">Push Notifications</label>
-                        <input type="checkbox" id="push-notifications">
+                        <div class="toggle-container">
+                            <input type="checkbox" id="push-notifications">
+                            <span class="toggle-slider"></span>
+                        </div>
                     </div>
                 </div>
 
@@ -103,10 +103,13 @@
                     <h2>Appearance</h2>
                     <div class="settings-item">
                         <label for="theme">Theme</label>
-                        <select id="theme">
-                            <option value="light">Light Mode</option>
-                            <option value="dark">Dark Mode</option>
-                        </select>
+                        <div class="select-container">
+                            <select id="theme">
+                                <option value="light">Light Mode</option>
+                                <option value="dark">Dark Mode</option>
+                            </select>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
                     </div>
                 </div>
 
@@ -120,40 +123,33 @@
                     </div>
                 </div>
             </div>
+        </main>
 
-            <div class="sidebar-right">
-                <div class="card suggestions-card">
-                    <h4>Saran untuk Anda</h4>
-                    <div class="suggestion-item">
-                        <img src="https://via.placeholder.com/40" alt="Profile Pic">
-                        <div>
-                            <strong>Resbobb</strong>
-                            <p>@Resbobb</p>
-                        </div>
-                        <button>Ikuti</button>
-                    </div>
-                    <div class="suggestion-item">
-                        <img src="https://via.placeholder.com/40" alt="Profile Pic">
-                        <div>
-                            <strong>Livy Renata</strong>
-                            <p>@livyrenata</p>
-                        </div>
-                        <button>Ikuti</button>
-                    </div>
+        <aside class="sidebar-right">
+            <div class="suggestions-card card">
+                <h4>Saran untuk Anda</h4>
+                <div class="suggestion-item">
+                    <img src="assets/img/home/resbobProfile.png" alt="Foto Indah">
+                    <div><strong>Resbobb</strong><p>@Resbobb</p></div>
+                    <button>Ikuti</button>
                 </div>
-                <div class="card trending-card">
-                    <h4>Trending Hari Ini</h4>
-                    <ul>
-                        <li><a href="#">#BillieEilish</a></li>
-                        <li><a href="#">#RisingStar</a></li>
-                        <li><a href="#">#WindahBasudara</a></li>
-                    </ul>
+                <div class="suggestion-item">
+                    <img src="assets/img/home/livyRenata.png" alt="Foto Eko">
+                    <div><strong>Livy Renata</strong><p>@livyrenata</p></div>
+                    <button>Ikuti</button>
                 </div>
             </div>
-        </div>
-    </main>
+            <div class="trending-card card">
+                <h4>Trending Hari Ini</h4>
+                <ul>
+                    <li><a href="#"># BillieEilish</a></li>
+                    <li><a href="#"># RisingStar</a></li>
+                    <li><a href="#"># WindahBasudara</a></li>
+                </ul>
+            </div>
+        </aside>
+    </div>
 
-    <script src="script/index.js"></script>
-    <script src="script/settings.js"></script>
+    <script src="/script/settings.js"></script>
 </body>
 </html>

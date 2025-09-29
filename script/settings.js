@@ -4,6 +4,7 @@ document.addEventListener('DOMContentLoaded', () => {
         themeSelect.addEventListener('change', (e) => {
             document.body.classList.remove('light-mode', 'dark-mode');
             document.body.classList.add(`${e.target.value}-mode`);
+            localStorage.setItem("theme", e.target.value);
         });
     }
 
@@ -32,13 +33,20 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // Ensure navigation links work by removing any conflicting event listeners
-    document.querySelectorAll('.nav-links a, .navigation-card a').forEach(link => {
-        link.addEventListener('click', (e) => {
-            const href = link.getAttribute('href');
-            if (href && href !== '#' && !href.startsWith('#')) {
-                window.location.href = href;
-            }
+    const toggleSwitches = document.querySelectorAll('.toggle-switch input[type="checkbox"]');
+    toggleSwitches.forEach(toggle => {
+        toggle.disabled = false;
+        toggle.addEventListener('change', (e) => {
+            const isChecked = e.target.checked;
+            console.log(`${e.target.id} toggled to ${isChecked}`);
+            localStorage.setItem(e.target.id, isChecked);
         });
+    });
+
+    toggleSwitches.forEach(toggle => {
+        const savedState = localStorage.getItem(toggle.id);
+        if (savedState === 'true') {
+            toggle.checked = true;
+        }
     });
 });
