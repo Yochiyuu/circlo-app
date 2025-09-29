@@ -155,6 +155,7 @@ body {
     color: black;
     border-radius: 8px;
     text-decoration: none;
+    font-size: 14px;
     font-weight: bold;
     transition: background 0.3s ease;
 }
