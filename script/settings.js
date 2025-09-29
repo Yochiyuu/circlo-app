@@ -35,10 +35,9 @@ document.addEventListener('DOMContentLoaded', () => {
     // Ensure navigation links work by removing any conflicting event listeners
     document.querySelectorAll('.nav-links a, .navigation-card a').forEach(link => {
         link.addEventListener('click', (e) => {
-            // Only prevent default for specific cases if needed, otherwise allow normal navigation
             const href = link.getAttribute('href');
-            if (href && href !== '#') {
-                window.location.href = href; // Force redirect
+            if (href && href !== '#' && !href.startsWith('#')) {
+                window.location.href = href;
             }
         });
     });
