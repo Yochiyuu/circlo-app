@@ -9,6 +9,80 @@ body {
   min-height: 100vh;
 }
 
+.theme-header {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
+
+.theme-btn {
+  background: rgba(0,0,0,0.05);
+  border: 1px solid rgba(0,0,0,0.1);
+  color: #ff0000;
+  font-size: 1.3rem;
+  cursor: pointer;
+  padding: 0.4rem 0.6rem;
+  border-radius: 50%;
+  transition: background 0.3s ease, color 0.3s ease, transform 0.2s ease;
+}
+
+.theme-btn:hover {
+  background: rgba(108,92,231,0.15);
+  transform: scale(1.1);
+}
+
+body.dark-mode .theme-btn {
+  border: 1px solid white;
+  background-color: #463f3f;
+  color: rgba(255, 255, 255, 0.801);
+}
+
+body.dark-mode {
+  background: #111;
+  color: #fff;
+}
+
+body.dark-mode .auth-container {
+  background: #1a1a1a;
+  box-shadow: 0 8px 20px rgba(255, 255, 255, 0.05);
+  border: 1px solid rgb(114, 90, 112);
+}
+
+body.dark-mode .auth-container h2 {
+  color: #d1cfff;
+}
+
+body.dark-mode .auth-form label {
+  color: #eee;
+}
+
+body.dark-mode .auth-form input {
+  background: #222;
+  border: 1px solid #555;
+  color: #eee;
+}
+
+body.dark-mode .auth-form input:focus {
+  border-color: #a48bff;
+  box-shadow: 0 0 5px rgba(164, 139, 255, 0.4);
+}
+
+body.dark-mode h5 {
+  color: #eee;
+}
+
+body.dark-mode h5 a {
+  color: #a48bff;
+}
+
+body.dark-mode .btn-primary {
+  background: #a48bff;
+}
+
+body.dark-mode .btn-primary:hover {
+  background: #8d75ff;
+}
+
 .auth-container {
   background: #ffffff;
   padding: 40px 35px;

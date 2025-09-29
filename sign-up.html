@@ -4,12 +4,18 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Sign Up - Circlo</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="stylesheet" href="style/logSignUp.css" />
   </head>
   <body>
+    <header class="theme-header">
+      <button id="theme-toggle" class="theme-btn">
+        <i class="fas fa-moon"></i>
+      </button>
+    </header>
     <div class="auth-container">
       <h2>Buat Akun Circlo</h2>
-      <form class="auth-form">
+      <form class="auth-form" id="signUpForm">
         <label>Nama Lengkap</label>
         <input type="text" placeholder="Nama lengkap" required />
 
@@ -23,13 +29,23 @@
         <input type="tel" placeholder="Nomor HP" required />
 
         <label>Password</label>
-        <input type="password" placeholder="Password" required />
+        <input type="password" id="password" placeholder="Password" required />
 
         <label>Konfirmasi Password</label>
-        <input type="password" placeholder="Ulangi password" required />
+        <input type="password" id="konfirmasiPassword" placeholder="Ulangi password" required />
+
+        <div class="snk-check">
+          <input type="checkbox" id="agree" required>
+          <label for="agree">
+            Saya telah membaca dan menyetujui <a href="snk.html">Syarat & Ketentuan</a>
+          </label>
+        </div>
 
         <button type="submit" class="btn-primary">Daftar</button>
+        <p id="warning" style="color:red;display: none;"></p>
       </form>
+      <h5>Sudah punya akun? <a href="login.html">Masuk</a></h5>
     </div>
+    <script src="script/signUp.js"></script>    
   </body>
 </html>
