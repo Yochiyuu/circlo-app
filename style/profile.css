@@ -188,6 +188,13 @@ body {
   color: var(--text-sub);
 }
 
+.mini-avatar {
+  width: 50px;    
+  height: 50px;    /* Atur tinggi yang sama dengan lebar */
+  border-radius: 50%;    /* Ini yang membuatnya bulat */
+  object-fit: cover;     /* Mencegah gambar menjadi lonjong/gepeng */
+  object-position: center; /* Ops*/
+}
 /* Navigasi */
 .navigation-card ul {
   list-style: none;
@@ -388,7 +395,9 @@ body.dark-mode .edit-profile-btn:hover {
   font-weight: 800;
   margin-bottom: 5px;
 }
+
 .info-text p {
+  margin-top: 20px;
   color: #eee;
   margin-bottom: 12px;
 }
@@ -564,7 +573,7 @@ body.dark-mode .edit-profile-btn:hover {
   transition: all 0.2s, background 0.3s;
 }
 .comment-box input:focus {
-  background: #fff;
+  background: var(--bg-input-focus);
   outline: 2px solid #9333ea;
 }
 
