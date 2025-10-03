@@ -160,3 +160,31 @@ function editMessage(id) {
 document.addEventListener('DOMContentLoaded', () => {
     chatInputArea.style.display = 'none';
 });
+
+// Fungsi untuk buka chat room dan sembunyikan sidebar + kontak
+document.querySelectorAll('.contact-item').forEach(item => {
+  item.addEventListener('click', () => {
+    // Sembunyikan sidebar kiri dan kontak (khusus mobile)
+    if (window.innerWidth <= 430) {
+      document.querySelector('.ig-sidebar').classList.add('hidden');
+      document.querySelector('.ig-contacts').classList.add('hidden');
+      document.querySelector('.ig-main').classList.add('fullscreen');
+    }
+
+    // Tampilkan input chat & header
+    document.getElementById('chatInputArea').style.display = 'flex';
+    document.getElementById('chatHeader').innerHTML = `
+      <h3>${item.querySelector('strong').innerText}</h3>
+      <div class="chat-icons">
+        <i class="fas fa-phone"></i>
+        <i class="fas fa-video"></i>
+      </div>
+    `;
+  });
+});
+
+// Fungsi toggle menu (garis tiga) untuk buka sidebar
+function toggleSidebar() {
+  document.querySelector('.ig-sidebar').classList.toggle('hidden');
+  document.querySelector('.ig-contacts').classList.toggle('hidden');
+}
