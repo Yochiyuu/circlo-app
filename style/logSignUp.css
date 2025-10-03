@@ -1,7 +1,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
 
 body {
-  background: #f5f7fa;
+  background: url('/assets/img/login/WhiteAbstract.avif') no-repeat center center;   
+  background-size: cover;
   font-family: "Poppins", sans-serif;
   display: flex;
   flex-direction: column;
@@ -10,92 +11,98 @@ body {
   min-height: 100vh;
 }
 
-.theme-header {
-  position: absolute;
-  top: 20px;
-  right: 20px;
-}
-
-.theme-btn {
-  background: rgba(0,0,0,0.05);
-  border: 1px solid rgba(0,0,0,0.1);
-  color: #ff0000;
-  font-size: 1.3rem;
-  cursor: pointer;
-  padding: 0.4rem 0.6rem;
-  border-radius: 50%;
-  transition: background 0.3s ease, color 0.3s ease, transform 0.2s ease;
-}
-
-.theme-btn:hover {
-  background: rgba(108,92,231,0.15);
-  transform: scale(1.1);
-}
-
-body.dark-mode .theme-btn {
-  border: 1px solid white;
-  background-color: #463f3f;
-  color: rgba(255, 255, 255, 0.801);
-}
-
-body.dark-mode {
-  background: #111;
-  color: #fff;
-}
-
-body.dark-mode .auth-container {
-  background: #1a1a1a;
-  box-shadow: 0 8px 20px rgba(255, 255, 255, 0.05);
-  border: 1px solid rgb(114, 90, 112);
-}
-
-body.dark-mode .auth-container h2 {
-  color: #d1cfff;
-}
-
-body.dark-mode .auth-form label {
-  color: #eee;
-}
-
-body.dark-mode .auth-form input {
-  background: #222;
-  border: 1px solid #555;
-  color: #eee;
-}
-
-body.dark-mode .auth-form input:focus {
-  border-color: #a48bff;
-  box-shadow: 0 0 5px rgba(164, 139, 255, 0.4);
-}
-
-body.dark-mode h5 {
-  color: #eee;
-}
-
-body.dark-mode h5 a {
-  color: #a48bff;
-}
-
-body.dark-mode .btn-primary {
-  background: #a48bff;
-}
-
-body.dark-mode .btn-primary:hover {
-  background: #8d75ff;
-}
-
-.auth-container {
-  background: #ffffff;
-  padding: 40px 35px;
-  border-radius: 16px;
+.split-form {
+  display: flex;
   width: 100%;
-  max-width: 400px;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  max-width: 900px;
+  min-height: 600px;
+  background: #ffffff;
+  border-radius: 24px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  animation: fadeIn 0.6s ease-in-out;
+}
+
+.circlo-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.logo {
+  color: 6c5ce7;
+  font-size: 1.8rem;
+  font-weight: 600;
+}
+
+.nav a {
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+.nav a:hover {
+  opacity: 0.8;
+  text-decoration: underline;
+}
+
+.bag-kiri {
+  flex: 1;
+  background: url('/assets/img/login/Card Background 2.avif') no-repeat center center;   
+  background-size: cover;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  align-items: flex-end;
+  padding: 40px;
   text-align: center;
 }
 
+.bag-kiri.utk.signup {
+flex: 1;
+background: url('/assets/img/login/Card Background.avif') no-repeat center center;   
+background-size: cover;
+color: white;
+display: flex;
+justify-content: space-between;
+flex-direction: column;
+align-items: flex-end;
+padding: 40px;
+text-align: center;
+}
+
+.welcome-text h2 {
+  font-size: 2.41rem;
+  margin-bottom: 15px;
+}
+
+.welcome-text.utk.signup h3{
+  font-size: 2.4rem;
+  margin-bottom: 8px;
+}
+
+.auth-container {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 10px 35px;
+  text-align: center;
+  background: transparent;
+  box-shadow: none;
+  max-width: none;
+  border-radius: 0;
+}
+
+.auth-container.utk.login {
+  padding: 100px 35px;
+}
+
 .auth-container h2 {
-  color: #6c5ce7;
+  color: blueviolet;
   margin-bottom: 25px;
 }
 
@@ -126,6 +133,13 @@ body.dark-mode .btn-primary:hover {
   box-shadow: 0 0 5px rgba(108, 92, 231, 0.4);
 }
 
+.ingat {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 5px;
+}
+
 .btn-primary {
   background: #6c5ce7;
   color: #fff;
@@ -134,10 +148,11 @@ body.dark-mode .btn-primary:hover {
   border-radius: 10px;
   font-weight: 600;
   cursor: pointer;
+  margin-top: 10px;
 }
 
 .btn-primary:hover {
-  background: #5645d6;
+  background:#5645d6;
 }
 
 h5 {
@@ -153,4 +168,107 @@ h5 a {
 
 h5 a:hover {
   text-decoration: underline;
+}
+
+.theme-header {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  z-index: 10;
+}
+
+.theme-btn {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(59, 57, 57, 0.2);
+  color: red;
+  font-size: 1.3rem;
+  cursor: pointer;
+  padding: 0.4rem 0.6rem;
+  border-radius: 50%;
+  transition: background 0.3s ease, color 0.3s ease, transform 0.2s ease;
+}
+
+.theme-btn:hover {
+  background: rgba(147, 51, 234, 0.2);
+  transform: scale(1.1);
+}
+
+body.dark-mode {
+  background:url('/assets/img/login/purpleBackground.avif') no-repeat center center;   
+  background-size: cover;
+  color: #fff;
+}
+
+body.dark-mode .theme-btn {
+  border: 1px solid rgb(255, 255, 255);
+  background-color: #463f3f;
+  color: rgba(255, 255, 255, 0.801);
+}
+
+body.dark-mode .theme-btn:hover {
+  color: #9333ea;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 850px) {
+
+  body {
+    justify-content: flex-start;
+    padding: 40px 0;
+  }
+
+  .split-form {
+    margin-top: 20px;
+    flex-direction: column;
+    width: 90%;
+    min-height: auto;
+    height: auto;
+  }
+
+  .bag-kiri, .bag-kiri.utk.signup {
+    flex: none;
+    height: 250px;
+    justify-content: center;
+    text-align: center;
+    padding: 20px;
+    background: url('/assets/img/login/Card Background 2.avif') no-repeat center center;
+  }
+
+  .circlo-header {
+    display: none;
+  }
+
+  .welcome-text h2 {
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+  }
+
+  .welcome-text.utk.signup h3 {
+    font-size: 1.8rem;
+    margin-bottom: 8px;
+  }
+
+  .auth-container {
+    flex: none;
+    padding: 40px 25px;
+  }
+
+  .auth-container.utk.login {
+    padding: 40px 25px;
+  }
+
+  .auth-form {
+    max-width: 100%;
+  }
 }

@@ -7,29 +7,50 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="stylesheet" href="style/logSignUp.css" />
   </head>
-  <body>
-    <header class="theme-header">
-      <button id="theme-toggle" class="theme-btn">
-        <i class="fas fa-moon"></i>
-      </button>
-    </header>
-    <div class="auth-container">
-      <h2>Login ke Circlo</h2>
-      <form class="auth-form" id="loginForm">
-        <label>Username / Email</label>
-        <input type="text" placeholder="Masukkan username atau email" required />
-        <label>Password</label>
-        <input type="password" placeholder="Masukkan password" required />
-        <button type="submit" class="btn-primary">Login</button>
-      </form>
-      <h5>Belum punya akun? <a href="sign-up.html">Daftar disini</a></h5>
-    </div>
-    <footer>
-      <div class="footer">
-        <div class="bottom-bar">
-          <p>Copyright &copy; 2025 - Circlo, All Rights Reserved</p>
+    <body>
+        <header class="theme-header">
+            <button id="theme-toggle" class="theme-btn">
+                <i class="fas fa-moon"></i>
+            </button>
+        </header>
+        <div class="split-form">
+            <div class="bag-kiri">
+                <div class="circlo-header">
+                    <div class="logo">Circlo.</div>
+                    <nav class="nav">
+                        <a href="index.html">About Us</a>
+                    </nav>
+                </div>
+                <div class="welcome-text">
+                    <h2>Selamat Datang Kembali!</h2>
+                    <p>Masuk untuk melanjutkan petualangan Anda bersama kami.</p>
+                </div>
+            </div>
+            <div class="bag-kanan">
+                <div class="auth-container utk login">
+                    <h2>Login ke Circlo</h2>
+                    <form class="auth-form" id="loginForm">
+                        <label>Username / Email</label>
+                        <input type="text" placeholder="Masukkan username atau email" required />
+                        <label>Password</label>
+                        <input type="password" placeholder="Masukkan password" required />
+                        <div class="ingat">
+                            <input type="checkbox" id="agree">
+                            <label for="agree">Ingat Device Saat Ini</label>
+                        </div>
+                        <button type="submit" class="btn-primary">Login</button>
+                    </form>
+                    <h5>Belum punya akun? <a href="sign-up.html">Daftar disini</a></h5>
+                </div>
+            </div>
         </div>
-    </footer>
-    <script src="script/login.js"></script>
-  </body>
+        <footer>
+            <div class="footer">
+                <div class="bottom-bar">
+                <p>Copyright &copy; 2025 - Circlo, All Rights Reserved</p>
+                </div>
+            </div>
+        </footer>
+        <script src="script/login.js"></script>
+    </body>
 </html>
