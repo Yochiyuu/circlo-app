@@ -1,34 +1,27 @@
 document.addEventListener("DOMContentLoaded", () => {
   const allStoriesData = [
     {
-      user: "hak.konton",
-      profilePic: "https://picsum.photos/id/237/100/100",
-      storyContent: "https://picsum.photos/400/700?random=1",
+      user: "@republikindonesia",
+      profilePic: "assets/img/story/IndonesiaFlag.jpg",
+      storyContent: "assets/img/story/republikIndonesia.png",
       type: "image",
     },
     {
-      user: "nature_lover",
-      profilePic: "https://picsum.photos/id/1015/100/100",
+      user: "@livyrenata",
+      profilePic: "assets/img/home/livyRenata.png",
       storyContent: "assets/video/livyPost.mp4",
       type: "video",
     },
     {
-      user: "daraaulia_f",
-      profilePic: "https://picsum.photos/id/1027/100/100",
-      storyContent: "https://picsum.photos/400/700?random=3",
+      user: "@bradpitt",
+      profilePic: "https://hips.hearstapps.com/hmg-prod/images/actor-brad-pitt-attends-the-photocall-of-the-movie-wolfs-news-photo-1726680022.jpg?crop=0.670xw:1.00xh;0.0760xw,0&resize=640:*",
+      storyContent: "https://www.mnctrijaya.com/uploads/news/d717b62f-7e2e-469f-a662-2cb5e30b1371.jpg",
       type: "image",
     },
     {
-      user: "city_vibes",
-      profilePic: "https://picsum.photos/id/1074/100/100",
-      storyContent:
-        "https://assets.mixkit.co/videos/preview/mixkit-people-crossing-a-street-in-a-big-city-4573-large.mp4",
-      type: "video",
-    },
-    {
-      user: "lisa.blackpink",
-      profilePic: "https://picsum.photos/id/1011/100/100",
-      storyContent: "https://picsum.photos/400/700?random=5",
+      user: "@jvke",
+      profilePic: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSsID3K344ZfK_PJDnIB4f-GLP3mfD00_tIgw&s",
+      storyContent: "http://i.scdn.co/image/ab67616d0000b273a0934c15232680a3afc9da6e",
       type: "image",
     },
   ];
