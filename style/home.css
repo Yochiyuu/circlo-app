@@ -23,6 +23,15 @@ body {
     line-height: 1.6;
 }
 
+body.dark-mode {
+    --background-color: #121212;
+    --surface-color: #1E1E1E;
+    --text-color: #E6E6E6;
+    --text-secondary-color: #A0A0A0;
+    --border-color: #2E2E2E;
+    --shadow: 0 1px 3px rgba(255, 255, 255, 0.05);
+}
+
 a {
     text-decoration: none;
     color: var(--primary-color);

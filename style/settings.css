@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
 html {
   overflow-y: scroll;
 }
@@ -75,7 +77,7 @@ body {
   position: sticky;
   top: 0;
   z-index: 1000;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
 }
 
 .header-container {
@@ -195,8 +197,7 @@ body {
 .navigation-card ul li a {
   display: flex;
   align-items: center;
-  font-size: 1.1rem;
-  font-weight: 700;
+  font-weight: 500;
   color: var(--text-main);
   text-decoration: none;
   padding: 10px 0;
@@ -373,11 +374,11 @@ body.dark-mode .settings-item select:focus {
   transition: transform 0.3s ease;
 }
 
-.toggle-switch input:checked + .toggle-slider {
+.toggle-switch input:checked+.toggle-slider {
   background-color: var(--primary-color);
 }
 
-.toggle-switch input:checked + .toggle-slider:before {
+.toggle-switch input:checked+.toggle-slider:before {
   transform: translateX(24px);
 }
 
@@ -506,6 +507,7 @@ body.dark-mode .settings-item select:focus {
   .sidebar-left {
     display: none;
   }
+
   .main-nav ul {
     display: none;
     flex-direction: column;
@@ -516,9 +518,11 @@ body.dark-mode .settings-item select:focus {
     background: var(--bg-header);
     padding: 20px;
   }
+
   .main-nav ul.active {
     display: flex;
   }
+
   .menu-btn {
     display: block;
   }
