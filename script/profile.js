@@ -49,3 +49,28 @@ document.querySelectorAll('.post-images.slider').forEach(slider => {
     slides.style.transform = `translateX(-${index * 100}%)`;
   });
 });
+
+ document.addEventListener("DOMContentLoaded", () => {
+    const hamburger = document.querySelector(".hamburger-menu");
+    const icon = document.querySelector(".hamburger-icon");
+    const mobileMenu = document.querySelector(".mobile-menu-overlay");
+
+    // Klik hamburger → buka/tutup menu
+    hamburger.addEventListener("click", () => {
+      icon.classList.toggle("open");
+      mobileMenu.classList.toggle("active");
+    });
+
+    // Klik di luar menu → tutup menu (hanya di mobile)
+    window.addEventListener("click", (e) => {
+      if (
+        mobileMenu.classList.contains("active") &&
+        !mobileMenu.contains(e.target) &&
+        !hamburger.contains(e.target)
+      ) {
+        icon.classList.remove("open");
+        mobileMenu.classList.remove("active");
+      }
+    });
+  });
+
