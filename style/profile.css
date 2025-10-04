@@ -1,7 +1,6 @@
 html {
-  /* Hapus properti ini atau ubah menjadi: */
-  overflow-x: hidden; /* Mencegah scroll horizontal */
-  overflow-y: scroll; /* Pertahankan scroll vertikal default */
+  overflow-x: hidden;
+  overflow-y: scroll;
 }
 
 * {
@@ -12,21 +11,16 @@ html {
   font-family: 'Poppins', sans-serif;
 }
 
-/* ============================= */
-/* VARIABEL WARNA                */
-/* ============================= */
 :root {
   --bg-body: #f0f2f5;
   --bg-card: #fff;
   --bg-header: #fff;
   --bg-input: #f3e8ff;
   --bg-hover: #f0f2f5;
-
   --text-main: #1c1e21;
   --text-sub: #65676b;
   --text-light: #777;
   --text-link: #333;
-
   --border: #e5e7eb;
   --border-light: #e0e0e0;
 }
@@ -37,19 +31,14 @@ body.dark-mode {
   --bg-header: #242526;
   --bg-input: #3a3b3c;
   --bg-hover: #3a3b3c;
-
   --text-main: #e4e6eb;
   --text-sub: #b0b3b8;
   --text-light: #999;
   --text-link: #e4e6eb;
-
   --border: #3a3b3c;
   --border-light: #3a3b3c;
 }
 
-/* ============================= */
-/* BODY & LAYOUT                 */
-/* ============================= */
 body {
   background: var(--bg-body);
   color: var(--text-main);
@@ -64,9 +53,6 @@ body {
   padding: 0 20px;
 }
 
-/* ============================= */
-/* NAVBAR                        */
-/* ============================= */
 .main-header {
   background: var(--bg-header);
   border-bottom: 1px solid var(--border);
@@ -74,7 +60,7 @@ body {
   position: sticky;
   top: 0;
   z-index: 1000;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
 }
 
 .header-container {
@@ -120,9 +106,6 @@ body {
   transform: scale(1.05);
 }
 
-/* ============================= */
-/* SIDEBAR KIRI                  */
-/* ============================= */
 .sidebar-left {
   width: 280px;
   flex-shrink: 0;
@@ -137,7 +120,7 @@ body {
   border-radius: 16px;
   padding: 24px;
   margin-bottom: 20px;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   text-align: center;
   transition: transform 0.2s, box-shadow 0.2s, background 0.3s;
 }
@@ -191,13 +174,13 @@ body {
 }
 
 .mini-avatar {
-  width: 50px;    
-  height: 50px;    /* Atur tinggi yang sama dengan lebar */
-  border-radius: 50%;    /* Ini yang membuatnya bulat */
-  object-fit: cover;     /* Mencegah gambar menjadi lonjong/gepeng */
-  object-position: center; /* Ops*/
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: center;
 }
-/* Navigasi */
+
 .navigation-card ul {
   list-style: none;
 }
@@ -228,9 +211,6 @@ body {
   color: var(--text-sub);
 }
 
-/* ============================= */
-/* SIDEBAR KANAN                 */
-/* ============================= */
 .sidebar-right {
   width: 300px;
   flex-shrink: 0;
@@ -302,16 +282,12 @@ body {
   color: #a855f7;
 }
 
-/* ============================= */
-/* MAIN CONTENT                  */
-/* ============================= */
 .main-content {
   flex: 1;
   padding: 20px 0;
   max-width: 800px;
 }
 
-/* Profile Header */
 .profile-header {
   background: linear-gradient(135deg, #9333ea, #a855f7);
   color: #fff;
@@ -351,13 +327,12 @@ body {
   background: #9333ea;
   color: #fff;
   transform: scale(1.05);
-  box-shadow: 0 4px 12px rgba(255,255,255,0.4);
+  box-shadow: 0 4px 12px rgba(255, 255, 255, 0.4);
 }
 
-/* DARK MODE */
 body.dark-mode .edit-profile-btn {
-  background: #3b3b3b;   /* abu gelap */
-  color: #d8b4fe;        /* ungu muda */
+  background: #3b3b3b;
+  color: #d8b4fe;
   border: 1px solid #555;
 }
 
@@ -367,12 +342,11 @@ body.dark-mode .edit-profile-btn:hover {
   box-shadow: 0 0 10px rgba(147, 51, 234, 0.6);
 }
 
-
 .profile-info {
   display: flex;
   align-items: center;
   padding: 20px;
-  background: rgba(255,255,255,0.1);
+  background: rgba(255, 255, 255, 0.1);
   backdrop-filter: blur(10px);
 }
 
@@ -386,6 +360,7 @@ body.dark-mode .edit-profile-btn:hover {
   object-fit: cover;
   transition: transform 0.3s;
 }
+
 .profile-avatar:hover {
   transform: rotate(-3deg) scale(1.05);
 }
@@ -401,22 +376,22 @@ body.dark-mode .edit-profile-btn:hover {
   color: #eee;
   margin-bottom: 12px;
 }
+
 .stats {
   display: flex;
   gap: 25px;
 }
+
 .stats li strong {
   font-size: 1.2rem;
   color: #fff;
 }
+
 .stats li span {
   font-size: 0.85rem;
   color: #ddd;
 }
 
-/* ============================= */
-/* CREATE POST                   */
-/* ============================= */
 .create-post {
   display: flex;
   align-items: center;
@@ -425,16 +400,18 @@ body.dark-mode .edit-profile-btn:hover {
   border-radius: 20px;
   padding: 15px;
   margin-bottom: 20px;
-  box-shadow: 0 2px 6px rgba(147,51,234,0.1);
+  box-shadow: 0 2px 6px rgba(147, 51, 234, 0.1);
   transition: all 0.3s;
 }
+
 .create-post:hover {
-  box-shadow: 0 4px 14px rgba(147,51,234,0.2);
+  box-shadow: 0 4px 14px rgba(147, 51, 234, 0.2);
 }
 
 .create-post img {
   border-radius: 30px;
 }
+
 .create-post input {
   flex: 1;
   padding: 10px 15px;
@@ -444,32 +421,33 @@ body.dark-mode .edit-profile-btn:hover {
   color: var(--text-main);
   transition: border 0.3s, background 0.3s;
 }
+
 .create-post input:focus {
   border: 1px solid #9333ea;
   outline: none;
   background: #fff;
 }
+
 .create-post .actions i {
   font-size: 1.2rem;
   color: #9333ea;
   cursor: pointer;
   transition: transform 0.3s;
 }
+
 .create-post .actions i:hover {
   transform: scale(1.2);
 }
 
-/* ============================= */
-/* POST                          */
-/* ============================= */
 .post {
   background: var(--bg-card);
   border-radius: 20px;
   padding: 20px;
   margin-bottom: 25px;
-  box-shadow: 0 2px 6px rgba(147,51,234,0.1);
+  box-shadow: 0 2px 6px rgba(147, 51, 234, 0.1);
   transition: transform 0.2s ease, box-shadow 0.3s ease, background 0.3s;
 }
+
 .post:hover {
   transform: translateY(-3px);
   box-shadow: 0 6px 16px rgba(147, 51, 234, 0.15);
@@ -480,13 +458,16 @@ body.dark-mode .edit-profile-btn:hover {
   border: 2px solid #9333ea;
   transition: transform 0.3s;
 }
+
 .post-header img:hover {
   transform: scale(1.1);
 }
+
 .post-header h4 {
   font-weight: 700;
   color: var(--text-main);
 }
+
 .post-header p {
   font-size: 0.85rem;
   color: var(--text-sub);
@@ -503,6 +484,7 @@ body.dark-mode .edit-profile-btn:hover {
   object-fit: cover;
   transition: transform 0.3s;
 }
+
 .post-images img:hover {
   transform: scale(1.05);
 }
@@ -525,10 +507,12 @@ body.dark-mode .edit-profile-btn:hover {
   animation: burst 0.6s ease forwards;
   pointer-events: none;
 }
+
 .post-actions span {
   cursor: pointer;
   transition: all 0.3s;
 }
+
 .post-actions span:hover {
   color: #9333ea;
   transform: scale(1.2);
@@ -538,31 +522,32 @@ body.dark-mode .edit-profile-btn:hover {
   cursor: pointer;
   transition: color 0.3s ease, transform 0.2s ease;
 }
+
 .post-actions i.liked {
   color: #e11d48;
   transform: scale(1.3);
 }
+
 .post-actions i.bookmarked {
   color: #2563eb;
   transform: scale(1.3);
 }
+
 .post-actions i:hover {
   transform: scale(1.2);
   opacity: 0.8;
 }
 
-/* ============================= */
-/* COMMENT BOX                   */
-/* ============================= */
 .comment-box {
   display: flex;
   align-items: center;
   gap: 10px;
 }
 
-.comment-box img{
- border-radius: 30px;
+.comment-box img {
+  border-radius: 30px;
 }
+
 .comment-box input {
   flex: 1;
   border: none;
@@ -572,6 +557,7 @@ body.dark-mode .edit-profile-btn:hover {
   color: var(--text-main);
   transition: all 0.2s, background 0.3s;
 }
+
 .comment-box input:focus {
   background: var(--bg-input-focus);
   outline: 2px solid #9333ea;
@@ -618,7 +604,7 @@ body.dark-mode .edit-profile-btn:hover {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  background: rgba(0,0,0,0.5);
+  background: rgba(0, 0, 0, 0.5);
   color: #fff;
   border: none;
   padding: 8px 12px;
@@ -626,67 +612,59 @@ body.dark-mode .edit-profile-btn:hover {
   border-radius: 50%;
 }
 
-.post-images.slider .prev { left: 10px; }
-.post-images.slider .next { right: 10px; }
+.post-images.slider .prev {
+  left: 10px;
+}
+
+.post-images.slider .next {
+  right: 10px;
+}
 
 .image-indicator {
   position: absolute;
   top: 10px;
   right: 15px;
-  background: rgba(0,0,0,0.6);
+  background: rgba(0, 0, 0, 0.6);
   color: #fff;
   font-size: 14px;
   padding: 4px 8px;
   border-radius: 12px;
 }
 
-/* Tablet & Mobile */
 @media (max-width: 992px) {
   .layout {
     flex-direction: column;
     gap: 15px;
     padding: 0 10px;
   }
-
-  /* Pastikan tidak ada margin/padding yang menyebabkan overflow di luar .layout */
-
   .sidebar-left,
   .sidebar-right {
     width: 100%;
     position: relative;
     top: 0;
     height: auto;
-    /* Pastikan tidak ada 'height' atau 'overflow-y' yang aneh di sini */
   }
-
-
   .sidebar-right {
-    order: 3; 
+    order: 3;
   }
-
   .main-content {
     order: 2;
     max-width: 100%;
   }
-
   .profile-header {
     border-radius: 12px;
   }
-
   .cover-photo {
     height: 150px;
   }
-
   .profile-avatar {
     width: 80px;
     height: 80px;
     margin-top: -40px;
   }
-
   .info-text h2 {
     font-size: 1.2rem;
   }
-
   .stats {
     flex-wrap: wrap;
     gap: 12px;
@@ -698,43 +676,34 @@ body.dark-mode .edit-profile-btn:hover {
     flex-wrap: wrap;
     gap: 10px;
   }
-
   .main-nav ul {
     gap: 18px;
   }
-
   .logo a {
     font-size: 1.2rem;
   }
-
   .profile-card {
     padding: 16px;
   }
-
   .profile-card .profile-stats {
     flex-wrap: wrap;
     gap: 10px;
   }
-
   .create-post {
     flex-direction: column;
     align-items: stretch;
   }
-
   .create-post input {
     width: 100%;
   }
-
   .post {
     padding: 15px;
   }
-
   .post-actions {
     flex-wrap: wrap;
     gap: 10px;
     justify-content: space-between;
   }
-
   .comment-box input {
     font-size: 0.85rem;
   }
@@ -744,29 +713,23 @@ body.dark-mode .edit-profile-btn:hover {
   .main-nav ul {
     gap: 12px;
   }
-
   .main-nav a {
     font-size: 1rem;
   }
-
   .profile-info {
     flex-direction: column;
     align-items: center;
     text-align: center;
   }
-
   .profile-avatar {
     margin: 0 0 10px 0;
   }
-
   .info-text p {
     margin-top: 10px;
   }
-
   .stats {
     justify-content: center;
   }
-
   .post-images img {
     width: 100%;
   }

@@ -1,121 +1,156 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Search - Circlo</title>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-  <link rel="stylesheet" href="style/profile.css"> 
-  <link rel="stylesheet" href="style/search.css">
-</head>
-<body>
-  <header class="main-header">
-    <div class="header-container">
-      <div href="index.html" class="logo"><a href="#">Circlo</a></div>
-      <nav class="main-nav">
-        <ul>
-          <li><a href="home.html"><i class="fas fa-home"></i></a></li>
-          <li><a href="#"><i class="fas fa-paper-plane"></i></a></li>
-          <li><a href="#"><i class="fas fa-bell"></i></a></li>
-        </ul>
-      </nav>
-      <div class="user-profile">
-        <a href="profile.html"><img src="https://i.pravatar.cc/40?u=user1" alt="Foto Profil"></a>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Search - Circlo</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <link rel="stylesheet" href="style/profile.css" />
+    <link rel="stylesheet" href="style/search.css" />
+  </head>
+  <body>
+    <header class="main-header">
+      <div class="header-container">
+        <div href="index.html" class="logo"><a href="#">Circlo</a></div>
+        <nav class="main-nav">
+          <ul>
+            <li>
+              <a href="home.html"><i class="fas fa-home"></i></a>
+            </li>
+            <li>
+              <a href="#"><i class="fas fa-paper-plane"></i></a>
+            </li>
+            <li>
+              <a href="#"><i class="fas fa-bell"></i></a>
+            </li>
+          </ul>
+        </nav>
+        <div class="user-profile">
+          <a href="profile.html"
+            ><img src="https://i.pravatar.cc/40?u=user1" alt="Foto Profil"
+          /></a>
+        </div>
       </div>
-    </div>
-  </header>
+    </header>
 
-  <div class="layout">
+    <div class="layout">
       <aside class="sidebar-left">
         <div class="profile-card card">
           <a href="profile.html">
-            <img src="https://i.pravatar.cc/80?u=user1" alt="Foto Profil" class="profile-pic"/>
+            <img
+              src="https://i.pravatar.cc/80?u=user1"
+              alt="Foto Profil"
+              class="profile-pic"
+            />
           </a>
           <h3>User</h3>
           <p>@User</p>
           <div class="profile-stats">
-            <div><span>1.401</span><p>Following</p></div>
-            <div><span>5,201</span><p>Followers</p></div>
+            <div>
+              <span>1.401</span>
+              <p>Following</p>
+            </div>
+            <div>
+              <span>5,201</span>
+              <p>Followers</p>
+            </div>
           </div>
         </div>
         <div class="navigation-card card">
           <ul>
-            <li><a href="search.html"><i class="fas fa-solid fa-magnifying-glass"></i> Search</a></li>
-            <li><a href="./settings.html"><i class="fa-solid fa-globe"></i> Community</a></li>
-            <li><a href="#"><i class="fas fa-users"></i> Stories</a></li>
-            <li><a href="./settings.html"><i class="fas fa-cog"></i> Settings</a></li>
+            <li>
+              <a href="search.html"
+                ><i class="fas fa-solid fa-magnifying-glass"></i> Search</a
+              >
+            </li>
+            <li>
+              <a href="story.html"><i class="fas fa-users"></i> Stories</a>
+            </li>
+            <li>
+              <a href="settings.html"><i class="fas fa-cog"></i> Settings</a>
+            </li>
           </ul>
         </div>
       </aside>
 
-    <main class="main-content">
-      <h1>Pencarian</h1>
-      
-      <div class="search-input-container">
-        <i class="fas fa-search"></i>
-        <input type="text" placeholder="Cari pengguna, topik, atau tag...">
-      </div>
+      <main class="main-content">
+        <h1>Pencarian</h1>
 
-      <div class="search-results card">
-        <h3>Hasil Terbaru</h3>
-        
-        <a href="resultAccount.html" class="account-result-item">
-          <img src="/assets/img/resultAccount/profile.png" alt="Account 1">
-          <div class="account-result-info">
-            <strong>Andrew Reinhart</strong>
-            <p>@dru.rei</p>
-          </div>
-          <button class="follow-btn">Ikuti</button>
-        </a>
-
-        <a href="resultAccount.html" class="account-result-item">
-          <img src="https://i.pravatar.cc/50?u=accountB" alt="Account 2">
-          <div class="account-result-info">
-            <strong>Budi Santoso</strong>
-            <p>@budisantoso</p>
-          </div>
-          <button class="follow-btn">Ikuti</button>
-        </a>
-        
-        <a href="resultAccount.html" class="account-result-item">
-          <img src="https://i.pravatar.cc/50?u=accountC" alt="Account 3">
-          <div class="account-result-info">
-            <strong>Cindy Permata</strong>
-            <p>@cindy_p</p>
-          </div>
-          <button class="follow-btn">Ikuti</button>
-        </a>
-
-      </div>
-      
-    </main>
-
-    <aside class="sidebar-right">
-      <div class="suggestions-card card">
-        <h4>Saran untuk Anda</h4>
-        <div class="suggestion-item">
-          <img src="assets/img/home/resbobProfile.png" alt="Foto Resbobb">
-          <div><strong>Resbobb</strong><p>@Resbobb</p></div>
-          <button>Ikuti</button>
+        <div class="search-input-container">
+          <i class="fas fa-search"></i>
+          <input type="text" placeholder="Cari pengguna, topik, atau tag..." />
         </div>
-        <div class="suggestion-item">
-          <img src="assets/img/home/livyRenata.png" alt="Foto Livy Renata">
-          <div><strong>Livy Renata</strong><p>@livyrenata</p></div>
-          <button>Ikuti</button>
-        </div>
-      </div>
-      <div class="trending-card card">
-        <h4>Trending Hari Ini</h4>
-        <ul>
-          <li><a href="#"># BillieEilish</a></li>
-          <li><a href="#"># RisingStar</a></li>
-          <li><a href="#"># WindahBasudara</a></li>
-        </ul>
-      </div>
-    </aside>
-  </div>
 
-  <script src="script/profile.js"></script>
-</body>
+        <div class="search-results card">
+          <h3>Hasil Terbaru</h3>
+
+          <a href="resultAccount.html" class="account-result-item">
+            <img src="/assets/img/resultAccount/profile.png" alt="Account 1" />
+            <div class="account-result-info">
+              <strong>Andrew Reinhart</strong>
+              <p>@dru.rei</p>
+            </div>
+            <button class="follow-btn">Ikuti</button>
+          </a>
+
+          <a href="resultAccount.html" class="account-result-item">
+            <img src="https://i.pravatar.cc/50?u=accountB" alt="Account 2" />
+            <div class="account-result-info">
+              <strong>Budi Santoso</strong>
+              <p>@budisantoso</p>
+            </div>
+            <button class="follow-btn">Ikuti</button>
+          </a>
+
+          <a href="resultAccount.html" class="account-result-item">
+            <img src="https://i.pravatar.cc/50?u=accountC" alt="Account 3" />
+            <div class="account-result-info">
+              <strong>Cindy Permata</strong>
+              <p>@cindy_p</p>
+            </div>
+            <button class="follow-btn">Ikuti</button>
+          </a>
+        </div>
+      </main>
+
+      <aside class="sidebar-right">
+        <div class="suggestions-card card">
+          <h4>Saran untuk Anda</h4>
+          <div class="suggestion-item">
+            <img src="assets/img/home/resbobProfile.png" alt="Foto Resbobb" />
+            <div>
+              <strong>Resbobb</strong>
+              <p>@Resbobb</p>
+            </div>
+            <button>Ikuti</button>
+          </div>
+          <div class="suggestion-item">
+            <img src="assets/img/home/livyRenata.png" alt="Foto Livy Renata" />
+            <div>
+              <strong>Livy Renata</strong>
+              <p>@livyrenata</p>
+            </div>
+            <button>Ikuti</button>
+          </div>
+        </div>
+        <div class="trending-card card">
+          <h4>Trending Hari Ini</h4>
+          <ul>
+            <li><a href="#"># BillieEilish</a></li>
+            <li><a href="#"># RisingStar</a></li>
+            <li><a href="#"># WindahBasudara</a></li>
+          </ul>
+        </div>
+      </aside>
+    </div>
+
+    <script src="script/profile.js"></script>
+  </body>
 </html>
