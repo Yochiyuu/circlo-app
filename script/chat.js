@@ -1,6 +1,5 @@
 let currentContact = null;
 let activeElement = null;
-// Simulasi chat history
 let chatHistory = {
     "Daniel_Ganteng": [
         { id: 1, text: "Naik Gunung Halimun yok", sender: "other" },
@@ -35,10 +34,8 @@ const chatHeader = document.getElementById("chatHeader");
 const chatInputArea = document.getElementById("chatInputArea");
 const chatContentContainer = document.getElementById("chat-content-container");
 
-// Load chat ketika kontak diklik (Logic gabungan Desktop dan Mobile)
 contacts.forEach(contact => {
     contact.addEventListener("click", () => {
-        // 1. Logic Standar
         if (activeElement) {
             activeElement.classList.remove("active");
         }
@@ -50,13 +47,10 @@ contacts.forEach(contact => {
 
         const isMobile = window.innerWidth <= 430;
 
-        // 2. Logic Mobile (SAAT MASUK CHAT ROOM)
         if (isMobile) {
-            // Tindakan Masuk Chat: Sembunyikan Kontak, Tampilkan Chat
             document.querySelector('.ig-contacts').style.display = 'none'; 
             document.querySelector('.ig-main').classList.add('fullscreen');
 
-            // Set Header dengan ikon Back yang VISIBLE
             chatHeader.innerHTML = `
                 <i class="fas fa-arrow-left toggle-contacts-icon" onclick="toggleContacts()" style="visibility: visible; padding-right: 15px; cursor: pointer;"></i>
                 <div style="display: flex; align-items: center; flex: 1;">
@@ -73,7 +67,6 @@ contacts.forEach(contact => {
             `;
         } 
         
-        // 3. Logic Desktop
         else {
             chatHeader.innerHTML = `
                 <div class="user-info">
@@ -94,7 +87,6 @@ contacts.forEach(contact => {
     });
 });
 
-// Fungsi lainnya (sendMessage, renderChat, deleteMessage, editMessage) tidak diubah.
 
 function sendMessage(message) {
     if (!currentContact) return;
@@ -178,27 +170,20 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 
-// --- FUNGSI UTAMA TOMBOL BACK (toggleContacts) ---
 function toggleContacts() {
     const isMobile = window.innerWidth <= 430;
 
-    // KONDISI PENTING: Cek mode mobile DAN kita sedang berada di chat room
     if (isMobile && currentContact) {
-        // 1. Tindakan SAAT KELUAR CHAT ROOM:
-        // Tampilkan daftar kontak
         document.querySelector('.ig-contacts').style.display = 'flex';
-        // Sembunyikan chat area
         document.querySelector('.ig-main').classList.remove('fullscreen');
 
-        // 2. Reset Header ke tampilan awal "Select a contact..."
         chatHeader.innerHTML = `
             <i class="fas fa-arrow-left toggle-contacts-icon" onclick="toggleContacts()" style="visibility: hidden;"></i>
             <p class="select-contact-text">Select a contact to start chatting</p>
         `;
         
-        // 3. Reset state
         chatInputArea.style.display = 'none';
-        currentContact = null; // Kunci: Ini mereset agar tombol bisa berfungsi lagi saat masuk chat baru.
+        currentContact = null;
         if (activeElement) {
             activeElement.classList.remove('active');
             activeElement = null;
@@ -206,13 +191,11 @@ function toggleContacts() {
         chatBox.innerHTML = "";
         
     } else if (!isMobile) {
-        // Logika Desktop
         const contactsContainer = document.querySelector('.ig-contacts');
         contactsContainer.style.display = (contactsContainer.style.display === 'none' || contactsContainer.style.display === '') ? 'flex' : 'none';
     }
 }
 
-// Fungsi toggle menu (garis tiga)
 function toggleSidebar() {
     document.querySelector('.ig-sidebar').classList.toggle('hidden');
     document.querySelector('.ig-contacts').classList.toggle('hidden');

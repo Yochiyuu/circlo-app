@@ -2,32 +2,32 @@ document.addEventListener("DOMContentLoaded", () => {
   const allStoriesData = [
     {
       user: "Pendaki_Ganteng",
-      profilePic: "assets/img/story/gunung.jpg",
-      storyContent: "assets/img/story/pendaki.jpg",
+      profilePic: "assets/img/story/logo gunung1.jpg",
+      storyContent: "assets/img/story/mendakibersama.jpg",
       type: "image",
     },
     {
-      user: "bigmoskyy",
-      profilePic: "assets/img/story/bigmo.jpg",
-      storyContent: "assets/video/livyPost.mp4",
+      user: "bigmoskyyy",
+      profilePic: "assets/img/story/bigmosky.jpg",
+      storyContent: "assets/video/bigmolivy.mp4",
       type: "video",
     },
     {
       user: "Windahbasudara",
-      profilePic: "assets/img/story/windah.jpg",
-      storyContent: "assets/video/WindahJoget.mp4",
+      profilePic: "assets/img/story/windahbasudara.jpg",
+      storyContent: "assets/video/Windah.mp4",
       type: "video",
     },
     {
       user: "Gunung_vibes",
-      profilePic: "assets/img/story/Alam.jpg",
-      storyContent: "assets/video/Alam.mp4",
+      profilePic: "assets/img/story/logo gunung2.jpg",
+      storyContent: "assets/video/bikinmaproblox.mp4",
       type: "video",
     },
     {
       user: "RobloxStudio_Comunity",
-      profilePic: "assets/img/story/RobloxComunity.jpg",
-      storyContent: "assets/img/story/roblox.jpg",
+      profilePic: "assets/img/story/robloxwow.jpg",
+      storyContent: "assets/img/story/bikinroblox.jpg",
       type: "image",
     },
   ];

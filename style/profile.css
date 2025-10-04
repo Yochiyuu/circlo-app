@@ -437,6 +437,7 @@ body:not(.dark-mode) .hamburger-icon span {
 
 .trending-card ul {
   list-style: none;
+  text-align: left;
 }
 
 .trending-card li {
