@@ -1,128 +1,180 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Your Profile - Circlo</title>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-  <link rel="stylesheet" href="style/profile.css">
-</head>
-<body>
-  <header class="main-header">
-    <div class="header-container">
-      <div class="logo"><a href="#">Circlo</a></div>
-      <nav class="main-nav">
-        <ul>
-          <li><a href="home.html"><i class="fas fa-home"></i></a></li>
-          <li><a href="#"><i class="fas fa-paper-plane"></i></a></li>
-          <li><a href="#"><i class="fas fa-bell"></i></a></li>
-        </ul>
-      </nav>
-      <div class="user-profile">
-        <a href="profile.html"><img src="https://i.pravatar.cc/40?u=user1" alt="Foto Profil"></a>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Your Profile - Circlo</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <link rel="stylesheet" href="style/profile.css" />
+  </head>
+  <body>
+    <header class="main-header">
+      <div class="header-container">
+        <div class="logo"><a href="#">Circlo</a></div>
+        <nav class="main-nav">
+          <ul>
+            <li>
+              <a href="home.html"><i class="fas fa-home"></i></a>
+            </li>
+            <li>
+              <a href="chat.html"><i class="fas fa-paper-plane"></i></a>
+            </li>
+            <li>
+              <a href="#"><i class="fas fa-bell"></i></a>
+            </li>
+          </ul>
+        </nav>
+        <div class="user-profile">
+          <a href="profile.html"
+            ><img src="https://i.pravatar.cc/40?u=user1" alt="Foto Profil"
+          /></a>
+        </div>
       </div>
-    </div>
-  </header>
+    </header>
 
-  <div class="layout">
-    <aside class="sidebar-left">
-      <div class="profile-card card">
-        <img src="https://i.pravatar.cc/80?u=user1" alt="Foto Profil" class="profile-pic">
-        <h3>User</h3>
-        <p>@User</p>
-        <div class="profile-stats">
-          <div><span>1.401</span><p>Following</p></div>
-          <div><span>5,201</span><p>Followers</p></div>
-        </div>
-      </div>
-      <div class="navigation-card card">
-        <ul>
-          <li><a href="#"><i class="fas fa-user-friends"></i> Search</a></li>
-          <li><a href="#"><i class="fas fa-users"></i> Stories</a></li>
-          <li><a href="./settings.html"><i class="fas fa-cog"></i> Pengaturan</a></li>
-        </ul>
-      </div>
-    </aside>
-
-    <main class="main-content">
-      <div class="profile-header">
-        <div class="cover-photo">
-          <img src="https://picsum.photos/1200/300" alt="Cover">
-        </div>
-        <div class="profile-info">
-          <img src="assets/img/resultAccount/profile.png" class="profile-avatar" alt="User">
-          <div class="info-text">
-            <h2>Andrew Reinhart</h2>
-            <h5>@dru.rei</h5>
-            <p>Hobi Mendaki</p>
-            <ul class="stats">
-              <li><strong>1</strong><span>Posts</span></li>
-              <li><strong>1,503</strong><span>Followers</span></li>
-              <li><strong>376</strong><span>Following</span></li>
-              <li><strong>17</strong><span>Friends</span></li>
-            </ul>
-          </div>
-        </div>
-      </div>
-      <div class="feed">
-        <div class="post card">
-          <div class="post-header">
-            <img src="assets/img/resultAccount/profile.png" class="mini-avatar">
+    <div class="layout">
+      <aside class="sidebar-left">
+        <div class="profile-card card">
+          <a href="profile.html">
+            <img
+              src="https://i.pravatar.cc/80?u=user1"
+              alt="Foto Profil"
+              class="profile-pic"
+            />
+          </a>
+          <h3>User</h3>
+          <p>@User</p>
+          <div class="profile-stats">
             <div>
-              <h4>Andrew Reinhart</h4>
-              <p>27 Jun at 3:13 PM</p>
+              <span>1.401</span>
+              <p>Following</p>
             </div>
-            <i class="fas fa-ellipsis-h more"></i>
-          </div>
-          <p class="post-text">Demo hari ini besar banget</p>
-          <div class="post-images slider">
-            <div class="slides">
-              <img src="/assets/img/resultAccount/berita1.png">
-              <img src="/assets/img/resultAccount/berita2.png">
+            <div>
+              <span>5,201</span>
+              <p>Followers</p>
             </div>
-            <button class="prev">&#10094;</button>
-            <button class="next">&#10095;</button>
-          </div>
-          <div class="post-actions">
-            <span><i class="far fa-comment"></i> 57</span>
-            <span><i class="far fa-heart"></i> 11,2K</span>
-            <span><i class="far fa-share-square"></i> 2K</span>
-            <span><i class="far fa-bookmark"></i> 237</span>
-          </div>
-          <div class="comment-box">
-            <img src="https://i.pravatar.cc/50?u=user1" class="mini-avatar">
-            <input type="text" placeholder="Write a comment...">
           </div>
         </div>
-      </div>
-    </main>
+        <div class="navigation-card card">
+          <ul>
+            <li>
+              <a href="search.html"
+                ><i class="fas fa-solid fa-magnifying-glass"></i> Search</a
+              >
+            </li>
+            <li>
+              <a href="./settings.html"
+                ><i class="fa-solid fa-globe"></i> Community
+              </a>
+            </li>
+            <li>
+              <a href="#"><i class="fas fa-users"></i> Stories</a>
+            </li>
+            <li>
+              <a href="./settings.html"><i class="fas fa-cog"></i> Settings</a>
+            </li>
+          </ul>
+        </div>
+      </aside>
 
-    <aside class="sidebar-right">
-      <div class="suggestions-card card">
-        <h4>Saran untuk Anda</h4>
-        <div class="suggestion-item">
-          <img src="assets/img/home/resbobProfile.png" alt="Foto Indah">
-          <div><strong>Resbobb</strong><p>@Resbobb</p></div>
-          <button>Ikuti</button>
+      <main class="main-content">
+        <div class="profile-header">
+          <div class="cover-photo">
+            <img src="https://picsum.photos/1200/300" alt="Cover" />
+          </div>
+          <div class="profile-info">
+            <img
+              src="assets/img/resultAccount/profile.png"
+              class="profile-avatar"
+              alt="User"
+            />
+            <div class="info-text">
+              <h2>Andrew Reinhart</h2>
+              <h5>@dru.rei</h5>
+              <p>Hobi Mendaki</p>
+              <ul class="stats">
+                <li><strong>1</strong><span>Posts</span></li>
+                <li><strong>1,503</strong><span>Followers</span></li>
+                <li><strong>376</strong><span>Following</span></li>
+                <li><strong>17</strong><span>Friends</span></li>
+              </ul>
+            </div>
+          </div>
         </div>
-        <div class="suggestion-item">
-          <img src="assets/img/home/livyRenata.png" alt="Foto Eko">
-          <div><strong>Livy Renata</strong><p>@livyrenata</p></div>
-          <button>Ikuti</button>
+        <div class="feed">
+          <div class="post card">
+            <div class="post-header">
+              <img
+                src="assets/img/resultAccount/profile.png"
+                class="mini-avatar"
+              />
+              <div>
+                <h4>Andrew Reinhart</h4>
+                <p>27 Jun at 3:13 PM</p>
+              </div>
+              <i class="fas fa-ellipsis-h more"></i>
+            </div>
+            <p class="post-text">Demo hari ini besar banget</p>
+            <div class="post-images slider">
+              <div class="slides">
+                <img src="/assets/img/resultAccount/berita1.png" />
+                <img src="/assets/img/resultAccount/berita2.png" />
+              </div>
+              <button class="prev">&#10094;</button>
+              <button class="next">&#10095;</button>
+            </div>
+            <div class="post-actions">
+              <span><i class="far fa-comment"></i> 57</span>
+              <span><i class="far fa-heart"></i> 11,2K</span>
+              <span><i class="far fa-share-square"></i> 2K</span>
+              <span><i class="far fa-bookmark"></i> 237</span>
+            </div>
+            <div class="comment-box">
+              <img src="https://i.pravatar.cc/50?u=user1" class="mini-avatar" />
+              <input type="text" placeholder="Write a comment..." />
+            </div>
+          </div>
         </div>
-      </div>
-      <div class="trending-card card">
-        <h4>Trending Hari Ini</h4>
-        <ul>
-          <li><a href="#"># BillieEilish</a></li>
-          <li><a href="#"># RisingStar</a></li>
-          <li><a href="#"># WindahBasudara</a></li>
-        </ul>
-      </div>
-    </aside>
-  </div>
+      </main>
 
-  <script src="script/profile.js"></script>
-</body>
+      <aside class="sidebar-right">
+        <div class="suggestions-card card">
+          <h4>Saran untuk Anda</h4>
+          <div class="suggestion-item">
+            <img src="assets/img/home/resbobProfile.png" alt="Foto Indah" />
+            <div>
+              <strong>Resbobb</strong>
+              <p>@Resbobb</p>
+            </div>
+            <button>Ikuti</button>
+          </div>
+          <div class="suggestion-item">
+            <img src="assets/img/home/livyRenata.png" alt="Foto Eko" />
+            <div>
+              <strong>Livy Renata</strong>
+              <p>@livyrenata</p>
+            </div>
+            <button>Ikuti</button>
+          </div>
+        </div>
+        <div class="trending-card card">
+          <h4>Trending Hari Ini</h4>
+          <ul>
+            <li><a href="#"># BillieEilish</a></li>
+            <li><a href="#"># RisingStar</a></li>
+            <li><a href="#"># WindahBasudara</a></li>
+          </ul>
+        </div>
+      </aside>
+    </div>
+
+    <script src="script/profile.js"></script>
+  </body>
 </html>

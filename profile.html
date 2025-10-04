@@ -11,11 +11,11 @@
 <body>
   <header class="main-header">
     <div class="header-container">
-      <div class="logo"><a href="#">Circlo</a></div>
+      <div href="index.html" class="logo"><a href="#">Circlo</a></div>
       <nav class="main-nav">
         <ul>
           <li><a href="home.html"><i class="fas fa-home"></i></a></li>
-          <li><a href="#"><i class="fas fa-paper-plane"></i></a></li>
+          <li><a href="chat.html"><i class="fas fa-paper-plane"></i></a></li>
           <li><a href="#"><i class="fas fa-bell"></i></a></li>
         </ul>
       </nav>
@@ -26,24 +26,49 @@
   </header>
 
   <div class="layout">
-    <aside class="sidebar-left">
-      <div class="profile-card card">
-        <img src="https://i.pravatar.cc/80?u=user1" alt="Foto Profil" class="profile-pic">
-        <h3>User</h3>
-        <p>@User</p>
-        <div class="profile-stats">
-          <div><span>1.401</span><p>Following</p></div>
-          <div><span>5,201</span><p>Followers</p></div>
+      <aside class="sidebar-left">
+        <div class="profile-card card">
+          <a href="profile.html">
+            <img
+              src="https://i.pravatar.cc/80?u=user1"
+              alt="Foto Profil"
+              class="profile-pic"
+            />
+          </a>
+          <h3>User</h3>
+          <p>@User</p>
+          <div class="profile-stats">
+            <div>
+              <span>1.401</span>
+              <p>Following</p>
+            </div>
+            <div>
+              <span>5,201</span>
+              <p>Followers</p>
+            </div>
+          </div>
         </div>
-      </div>
-      <div class="navigation-card card">
-        <ul>
-          <li><a href="#"><i class="fas fa-user-friends"></i> Search</a></li>
-          <li><a href="#"><i class="fas fa-users"></i> Stories</a></li>
-          <li><a href="./settings.html"><i class="fas fa-cog"></i> Pengaturan</a></li>
-        </ul>
-      </div>
-    </aside>
+        <div class="navigation-card card">
+          <ul>
+            <li>
+              <a href="search.html"
+                ><i class="fas fa-solid fa-magnifying-glass"></i> Search</a
+              >
+            </li>
+            <li>
+              <a href="./settings.html"
+                ><i class="fa-solid fa-globe"></i> Community
+              </a>
+            </li>
+            <li>
+              <a href="#"><i class="fas fa-users"></i> Stories</a>
+            </li>
+            <li>
+              <a href="./settings.html"><i class="fas fa-cog"></i> Settings</a>
+            </li>
+          </ul>
+        </div>
+      </aside>
 
     <main class="main-content">
       <div class="profile-header">

@@ -1,5 +1,7 @@
 html {
-  overflow-y: scroll;
+  /* Hapus properti ini atau ubah menjadi: */
+  overflow-x: hidden; /* Mencegah scroll horizontal */
+  overflow-y: scroll; /* Pertahankan scroll vertikal default */
 }
 
 * {
@@ -236,8 +238,6 @@ body {
   position: sticky;
   top: 80px;
   align-self: flex-start;
-  height: calc(100vh - 100px);
-  overflow-y: auto;
 }
 
 .suggestions-card h4,
@@ -640,3 +640,134 @@ body.dark-mode .edit-profile-btn:hover {
   border-radius: 12px;
 }
 
+/* Tablet & Mobile */
+@media (max-width: 992px) {
+  .layout {
+    flex-direction: column;
+    gap: 15px;
+    padding: 0 10px;
+  }
+
+  /* Pastikan tidak ada margin/padding yang menyebabkan overflow di luar .layout */
+
+  .sidebar-left,
+  .sidebar-right {
+    width: 100%;
+    position: relative;
+    top: 0;
+    height: auto;
+    /* Pastikan tidak ada 'height' atau 'overflow-y' yang aneh di sini */
+  }
+
+
+  .sidebar-right {
+    order: 3; 
+  }
+
+  .main-content {
+    order: 2;
+    max-width: 100%;
+  }
+
+  .profile-header {
+    border-radius: 12px;
+  }
+
+  .cover-photo {
+    height: 150px;
+  }
+
+  .profile-avatar {
+    width: 80px;
+    height: 80px;
+    margin-top: -40px;
+  }
+
+  .info-text h2 {
+    font-size: 1.2rem;
+  }
+
+  .stats {
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+}
+
+@media (max-width: 600px) {
+  .header-container {
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  .main-nav ul {
+    gap: 18px;
+  }
+
+  .logo a {
+    font-size: 1.2rem;
+  }
+
+  .profile-card {
+    padding: 16px;
+  }
+
+  .profile-card .profile-stats {
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  .create-post {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .create-post input {
+    width: 100%;
+  }
+
+  .post {
+    padding: 15px;
+  }
+
+  .post-actions {
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: space-between;
+  }
+
+  .comment-box input {
+    font-size: 0.85rem;
+  }
+}
+
+@media (max-width: 400px) {
+  .main-nav ul {
+    gap: 12px;
+  }
+
+  .main-nav a {
+    font-size: 1rem;
+  }
+
+  .profile-info {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .profile-avatar {
+    margin: 0 0 10px 0;
+  }
+
+  .info-text p {
+    margin-top: 10px;
+  }
+
+  .stats {
+    justify-content: center;
+  }
+
+  .post-images img {
+    width: 100%;
+  }
+}
