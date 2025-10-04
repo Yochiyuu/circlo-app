@@ -1,9 +1,15 @@
 document.addEventListener('DOMContentLoaded', () => {
+    // Load theme from localStorage on page load
+    const savedTheme = localStorage.getItem('theme');
+    if (savedTheme === 'dark') {
+        document.body.classList.add('dark-mode');
+    }
+
     const menuBtn = document.getElementById('menu-btn');
     const navLinks = document.querySelector('.nav-links');
     const menuIcon = document.querySelector('#menu-btn i');
     const themeToggle = document.getElementById('theme-toggle');
-    const themeIcon = themeToggle.querySelector('i');
+    const themeIcon = themeToggle ? themeToggle.querySelector('i') : null;
 
     if (menuBtn && navLinks) {
         menuBtn.addEventListener('click', () => {
@@ -20,13 +26,16 @@ document.addEventListener('DOMContentLoaded', () => {
 
     if (themeToggle) {
         themeToggle.addEventListener('click', () => {
-            document.body.classList.toggle('light-mode');
-            if (document.body.classList.contains('light-mode')) {
+            document.body.classList.toggle('dark-mode');
+            const isDarkMode = document.body.classList.contains('dark-mode');
+            if (isDarkMode) {
                 themeIcon.classList.remove('fa-moon');
                 themeIcon.classList.add('fa-sun');
+                localStorage.setItem('theme', 'dark');
             } else {
                 themeIcon.classList.remove('fa-sun');
                 themeIcon.classList.add('fa-moon');
+                localStorage.setItem('theme', 'light');
             }
         });
     }
@@ -34,7 +43,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // Fix navigation: Allow redirect while toggling mobile menu
     document.querySelectorAll('.nav-links a').forEach(link => {
         link.addEventListener('click', (e) => {
-            if (navLinks.classList.contains('active')) {
+            if (navLinks && navLinks.classList.contains('active')) {
                 navLinks.classList.remove('active');
                 menuIcon.classList.remove('fa-times');
                 menuIcon.classList.add('fa-bars');

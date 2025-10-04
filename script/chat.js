@@ -9,7 +9,6 @@ let chatHistory = {
     "Andrew_Dru.rei": [
         { id: 1, text: "Helm gua Balikin woy", sender: "other" },
         { id: 2, text: "Udah gua taro di depan kos kok", sender: "self" },
-
     ],
     "Marco_Jago.Gitar": [
         { id: 1, text: "Lu mau les gitar sama gua gak?", sender: "other" },
@@ -19,13 +18,12 @@ let chatHistory = {
         { id: 1, text: "Los, lu dimana? lu inget kan ada kelas hari ini?", sender: "self" },
         { id: 2, text: "Woy...", sender: "self" },
         { id: 3, text: "Sorry gua ketiduran, ini otw kampus!", sender: "other" }
-
     ],
     "Putra_Cyber": [
         { id: 1, text: "Put, tolong bantuin gua bikin firewall dong buat topologi gua", sender: "other" },
         { id: 2, text: "Ooo lu gak bisa ya? yaudah sini gua bikinin", sender: "self" } // Pesan ini bisa kamu coba edit/hapus
     ]
-    };
+};
 let messageIdCounter = 100; // Counter unik untuk pesan baru
 
 const contacts = document.querySelectorAll(".contact-item");
@@ -34,6 +32,15 @@ const chatInput = document.getElementById("chatInput");
 const chatHeader = document.getElementById("chatHeader");
 const chatInputArea = document.getElementById("chatInputArea");
 const chatContentContainer = document.getElementById("chat-content-container");
+
+// Load theme from localStorage on page load
+document.addEventListener('DOMContentLoaded', () => {
+    const savedTheme = localStorage.getItem('theme');
+    if (savedTheme === 'dark') {
+        document.body.classList.add('dark-mode');
+    }
+    chatInputArea.style.display = 'none';
+});
 
 // Load chat ketika kontak diklik
 contacts.forEach(contact => {
@@ -188,3 +195,8 @@ function toggleSidebar() {
   document.querySelector('.ig-sidebar').classList.toggle('hidden');
   document.querySelector('.ig-contacts').classList.toggle('hidden');
 }
+
+const toggleBtn = document.getElementById('dark-mode-toggle');
+toggleBtn.addEventListener('click', () => {
+  document.body.classList.toggle('dark');
+});

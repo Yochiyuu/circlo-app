@@ -1,19 +1,24 @@
 document.addEventListener('DOMContentLoaded', () => {
-    const savedTheme = localStorage.getItem("theme");
-    if (savedTheme) {
-        document.body.classList.add(`${savedTheme}-mode`);
-        const themeSelect = document.getElementById('theme');
-        if (themeSelect) {
-            themeSelect.value = savedTheme;
-        }
+    // Load theme from localStorage on page load
+    const savedTheme = localStorage.getItem('theme');
+    if (savedTheme === 'dark') {
+        document.body.classList.add('dark-mode');
     }
 
     const themeSelect = document.getElementById('theme');
     if (themeSelect) {
+        // Set initial value based on saved theme
+        if (savedTheme === 'dark') {
+            themeSelect.value = 'dark';
+        } else {
+            themeSelect.value = 'light';
+        }
+
         themeSelect.addEventListener('change', (e) => {
             document.body.classList.remove('light-mode', 'dark-mode');
-            document.body.classList.add(`${e.target.value}-mode`);
-            localStorage.setItem("theme", e.target.value);
+            const selectedTheme = e.target.value;
+            document.body.classList.add(`${selectedTheme}-mode`);
+            localStorage.setItem('theme', selectedTheme);
         });
     }
 
@@ -42,16 +47,19 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
+    // Enable and manage toggle switches
     const toggleSwitches = document.querySelectorAll('.toggle-switch input[type="checkbox"]');
     toggleSwitches.forEach(toggle => {
-        toggle.disabled = false;
+        toggle.disabled = false; // Ensure checkboxes are not disabled
         toggle.addEventListener('change', (e) => {
             const isChecked = e.target.checked;
             console.log(`${e.target.id} toggled to ${isChecked}`);
             localStorage.setItem(e.target.id, isChecked);
+            // Update UI or perform other actions based on toggle state if needed
         });
     });
 
+    // Initialize toggle states from localStorage
     toggleSwitches.forEach(toggle => {
         const savedState = localStorage.getItem(toggle.id);
         if (savedState === 'true') {
