@@ -3,29 +3,24 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Chat</title>
+  <title>IG Clone Direct</title>
   <link rel="stylesheet" href="style/chat.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
-  <div class="ig-container">
-    <button class="menu-toggle" onclick="toggleSidebar()">
-    <i class="fas fa-bars"></i>
-    </button>
+  <div class="ig-container"> 
     
-    <nav class="ig-sidebar">
-      <ul class="ig-menu">
-        <ul class="ig-menu">
-    <li  title="Home" onclick="loadPage('home.html', this)"><a href="./home.html"><i class="fas fa-home"></i></a></li>
-    <li  title="Story" onclick="loadPage('story.html', this)"><a href="./story.html"><i class="far fa-plus-square"></i></a></li>
-    <li  title="Settings" onclick="loadPage('settings.html', this)"><a href="./settings.html"><i class="fas fa-cog"></i></a></li>
+   <nav class="ig-sidebar">
+    <ul class="ig-menu">
+        <li title="Home" onclick="loadPage('home.html', this)"><a href="./home.html"><i class="fas fa-home"></i></a></li>
+        <li title="Story" onclick="loadPage('story.html', this)"><a href="./story.html"><i class="fas fa-users"></i></a></li>
+        <li title="Settings" onclick="loadPage('settings.html', this)"><a href="./settings.html"><i class="fas fa-cog"></i></a></li>
     </ul>
 
-    </ul>
-      <div class="ig-profile">
-          <a href="./profile.html"><i class="fas fa-user-circle"></i></a>
-      </div>
-    </nav>
+    <div class="ig-profile">
+        <a href="./profile.html"><i class="fas fa-user-circle"></i></a>
+    </div>
+</nav>
 
     <aside class="ig-contacts">
       <div class="contact-header">
@@ -91,7 +86,7 @@
     <main class="ig-main">
       <div id="chat-content-container">
         <div class="chat-header" id="chatHeader">
-          <i class="fas fa-bars toggle-contacts-icon" onclick="toggleContacts()"></i>
+          <i class="fas fa-arrow-left toggle-contacts-icon" onclick="toggleContacts()"></i>
           <p class="select-contact-text">Select a contact to start chatting</p>
         </div>
 

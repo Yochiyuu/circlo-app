@@ -12,7 +12,7 @@
 
         .exit-button {
             position: fixed;
-            top: 20px;
+            top: 45px;
             right: 20px;
             width: 40px;
             height: 40px;
@@ -23,14 +23,11 @@
             align-items: center;
             cursor: pointer;
             z-index: 200;
-            font-size: 25px;
+            /* Paling atas */
+            font-size: 24px;
             color: #fff;
             line-height: 1;
             transition: background-color 0.2s;
-        }
-
-        .exit-button a{
-            text-decoration: none;
         }
 
         .exit-button:hover {
