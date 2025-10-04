@@ -1,4 +1,13 @@
 document.addEventListener('DOMContentLoaded', () => {
+    const savedTheme = localStorage.getItem("theme");
+    if (savedTheme) {
+        document.body.classList.add(`${savedTheme}-mode`);
+        const themeSelect = document.getElementById('theme');
+        if (themeSelect) {
+            themeSelect.value = savedTheme;
+        }
+    }
+
     const themeSelect = document.getElementById('theme');
     if (themeSelect) {
         themeSelect.addEventListener('change', (e) => {
