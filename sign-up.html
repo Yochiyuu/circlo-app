@@ -1,66 +1,61 @@
 <!DOCTYPE html>
 <html lang="id">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Sign Up - Circlo</title>
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-        <link rel="stylesheet" href="style/logSignUp.css" />
-    </head>
-    <body>
-        <header class="theme-header">
-            <button id="theme-toggle" class="theme-btn">
-                <i class="fas fa-moon"></i>
-            </button>
-        </header>
-        <div class="split-form">
-            <div class="bag-kiri utk signup">
-                <div class="circlo-header">
-                    <div class="logo">Circlo.</div>
-                    <nav class="nav">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sign Up - Circlo</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="style/logSignUp.css" />
+</head>
+<body>
+    <header class="theme-header">
+        <button id="theme-toggle" class="theme-btn">
+            <i class="fas fa-moon"></i>
+        </button>
+    </header>
+    <div class="split-form">
+        <div class="bag-kiri utk signup">
+            <div class="circlo-header">
+                <div class="logo">Circlo.</div>
+                <nav class="nav">
                     <a href="index.html">About Us</a>
-                    </nav>
-                </div>
-                <div class="welcome-text utk signup">
-                    <h3>Bergabunglah Bersama Kami!</h3>
-                    <p>Buat akun Anda dan mulai perjalanan baru Anda di Circlo.</p>
-                </div>
+                </nav>
             </div>
-            <div class="bag-kanan">
-                <div class="auth-container">
-                    <h2>Buat Akun Circlo</h2>
-                    <form class="auth-form" id="signUpForm">
-                        <label>Nama Lengkap</label>
-                        <input type="text" placeholder="Nama lengkap" required />
-
-                        <label>Username</label>
-                        <input type="text" placeholder="Username" required />
-
-                        <label>Email</label>
-                        <input type="email" placeholder="Email" required />
-
-                        <label>Nomor Handphone</label>
-                        <input type="tel" placeholder="Nomor HP" required />
-
-                        <label>Password</label>
-                        <input type="password" id="password" placeholder="Password" required />
-
-                        <label>Konfirmasi Password</label>
-                        <input type="password" id="konfirmasiPassword" placeholder="Ulangi password" required />
-                        <button type="submit" class="btn-primary">Daftar</button>
-                        <p id="warning" style="color:red;display: none;"></p>
-                    </form>
-                    <h5>Sudah punya akun? <a href="login.html">Masuk</a></h5>
-                </div>
+            <div class="welcome-text utk signup">
+                <h3>Bergabunglah Bersama Kami!</h3>
+                <p>Buat akun Anda dan mulai perjalanan baru Anda di Circlo.</p>
             </div>
         </div>
-        <footer>
-            <div class="footer">
-                <div class="bottom-bar">
-                    <p>Copyright &copy; 2025 - Circlo, All Rights Reserved</p>
-                </div>
+        <div class="bag-kanan">
+            <div class="auth-container">
+                <h2>Buat Akun Circlo</h2>
+                <form class="auth-form" id="signUpForm">
+                    <label>Nama Lengkap</label>
+                    <input type="text" placeholder="Nama lengkap" required />
+                    <label>Username</label>
+                    <input type="text" placeholder="Username" required />
+                    <label>Email</label>
+                    <input type="email" placeholder="Email" required />
+                    <label>Nomor Handphone</label>
+                    <input type="tel" placeholder="Nomor HP" required />
+                    <label>Password</label>
+                    <input type="password" id="password" placeholder="Password" required />
+                    <label>Konfirmasi Password</label>
+                    <input type="password" id="konfirmasiPassword" placeholder="Ulangi password" required />
+                    <button type="submit" class="btn-primary">Daftar</button>
+                    <p id="warning" style="color:red;display: none;"></p>
+                </form>
+                <h5>Sudah punya akun? <a href="login.html">Masuk</a></h5>
             </div>
-        </footer>
-        <script src="script/signUp.js"></script>    
-    </body>
+        </div>
+    </div>
+    <footer>
+        <div class="footer">
+            <div class="bottom-bar">
+                <p>Copyright &copy; 2025 - Circlo, All Rights Reserved</p>
+            </div>
+        </div>
+    </footer>
+    <script src="script/signUp.js"></script>
+</body>
 </html>
