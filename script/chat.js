@@ -200,3 +200,10 @@ function toggleSidebar() {
     document.querySelector('.ig-sidebar').classList.toggle('hidden');
     document.querySelector('.ig-contacts').classList.toggle('hidden');
 }
+
+document.addEventListener("DOMContentLoaded", () => {
+  const savedTheme = localStorage.getItem("theme");
+  if (savedTheme === "dark") {
+    document.body.classList.add("dark-mode");
+  }
+});
