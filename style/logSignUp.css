@@ -226,53 +226,73 @@ body.dark-mode .theme-btn:hover {
 }
 
 @media (max-width: 850px) {
+body {
+  justify-content: flex-start;
+  padding: 20px 10px;
+  min-height: 100vh;
+  height: auto;
+  box-sizing: border-box;
+}
 
-  body {
-    justify-content: flex-start;
-    padding: 40px 0;
-  }
+.split-form {
+  flex-direction: column;
+  width: 100%;
+  min-height: auto;
+  height: auto;
+  margin-top: 20px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
 
-  .split-form {
-    margin-top: 20px;
-    flex-direction: column;
-    width: 90%;
-    min-height: auto;
-    height: auto;
-  }
+.bag-kiri, .bag-kiri.utk.signup {
+  flex: none;
+  height: 200px;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 20px;
+  border-radius: 24px 24px 0 0;
+  background: url('/assets/img/login/Card Background 2.avif') no-repeat center center;
+  background-size: cover;
+  box-sizing: border-box;
+}
 
-  .bag-kiri, .bag-kiri.utk.signup {
-    flex: none;
-    height: 250px;
-    justify-content: center;
-    text-align: center;
-    padding: 20px;
-    background: url('/assets/img/login/Card Background 2.avif') no-repeat center center;
-  }
+.circlo-header {
+  display: none;
+}
 
-  .circlo-header {
-    display: none;
-  }
+.welcome-text h2, .welcome-text.utk.signup h3 {
+  font-size: 1.6rem;
+  margin-bottom: 8px;
+}
 
-  .welcome-text h2 {
-    font-size: 1.8rem;
-    margin-bottom: 10px;
-  }
+.welcome-text p {
+  font-size: 0.9rem;
+}
 
-  .welcome-text.utk.signup h3 {
-    font-size: 1.8rem;
-    margin-bottom: 8px;
-  }
+.auth-container, .auth-container.utk.login {
+  flex: none;
+  padding: 30px 25px;
+  min-width: unset;
+  max-width: 100%;
+  width: 100%;
+  text-align: center;
+  box-sizing: border-box;
+}
 
-  .auth-container {
-    flex: none;
-    padding: 40px 25px;
-  }
+.auth-form input[type="text"],
+.auth-form input[type="email"],
+.auth-form input[type="tel"],
+.auth-form input[type="password"] {
+  box-sizing: border-box;
+  width: 100%;
+}
 
-  .auth-container.utk.login {
-    padding: 40px 25px;
-  }
+.btn-primary {
+  box-sizing: border-box;
+  width: 100%;
+}
 
-  .auth-form {
-    max-width: 100%;
+  .auth-form label {
+      text-align: left;
   }
 }
